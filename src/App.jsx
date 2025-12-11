@@ -40,12 +40,13 @@ function App() {
     >
       <Canvas camera={{ position: [0, 0, 8] }}>
         <CameraController />
+
         <color attach="background" args={["#171720"]} />
         <fog attach="fog" args={["#171720", 10, 30]} />
         <Suspense>
           <Experience />
-          </Suspense>
-      
+        </Suspense>
+       
 
         <OrbitControls
           enablePan={false} // Запретить перемещение

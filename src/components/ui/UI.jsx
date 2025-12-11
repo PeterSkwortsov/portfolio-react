@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link, useNavigate  } from "react-router-dom";
+import StartPages from "../../pages/StartPages";
 export const UI = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -14,8 +16,12 @@ export const UI = () => {
   }, []);
 
   const handleClick = (e) => {
-    e.stopPropagation();
-    // router.push("./home-page");
+    // e.stopPropagation();
+    <BrowserRouter>
+      <Routes>
+        <Route path="/StartPages" element={<StartPages />} />
+      </Routes>
+    </BrowserRouter>;
   };
   return (
     <div className="fixed inset-0 pointer-events-none">

@@ -6,8 +6,10 @@ import { UI } from "./components/ui/UI";
 import { OrbitControls } from "@react-three/drei";
 import { useState, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
-
-
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import StartPages from "./pages/StartPages";
+import { useNavigate } from "react-router-dom";
 
 function CameraController() {
   const { camera } = useThree();
@@ -32,30 +34,35 @@ function CameraController() {
 
 function App() {
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <Canvas camera={{ position: [0, 0, 8] }}>
-        <CameraController />
+    <BrowserRouter>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
+        <Canvas camera={{ position: [0, 0, 8] }}>
+          <CameraController />
 
-        <color attach="background" args={["#171720"]} />
-        <fog attach="fog" args={["#171720", 10, 30]} />
-        <Suspense>
-          <Experience />
-        </Suspense>
-       
+          <color attach="background" args={["#171720"]} />
+          <fog attach="fog" args={["#171720", 10, 30]} />
+          <Suspense>
+            <Experience />
+          </Suspense>
 
-        <OrbitControls
-          enablePan={false} // Запретить перемещение
-          enableRotate={false} // Запретить вращение
-          enableZoom={false}
-        />
-      </Canvas>
-      <UI />
-    </div>
+          <OrbitControls
+            enablePan={false} // Запретить перемещение
+            enableRotate={false} // Запретить вращение
+            enableZoom={false}
+          />
+        </Canvas>
+
+        <Routes>
+          <Route path="/" element={<UI />} />
+          <Route path="/StartPages" element={<StartPages />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

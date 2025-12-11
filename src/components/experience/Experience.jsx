@@ -64,7 +64,7 @@ export const Experience = () => {
       <Text
         ref={textRef}
         font={"fonts/Geologica_Cursive-ExtraBold.ttf"}
-        position={[0, -1.5, -8]} // Начальная позиция
+        position={[0, -1.5, -18]} // Начальная позиция
         lineHeight={1}
         fontSize={1.9}
         curveSegments={7}
@@ -73,7 +73,7 @@ export const Experience = () => {
         bevelSize={0.09}
         bevelSegments={7}
         textAlign="center"
-        // rotation-y={degToRad(0)}
+        // rotation-y={degToRad(30)}
         anchorY={"bottom"}
       >
         Cмотреть{"\n"}портфолио

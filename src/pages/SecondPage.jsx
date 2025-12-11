@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import StartPages from "./StartPages";
+import StartPagesTwo from "../components/StartPagesTwo";
 import Header from '../components/Header';
 
 const SecondPage = () => {
@@ -13,17 +13,17 @@ const SecondPage = () => {
   return (
     <div className="page">
       {/* Компонент 1 */}
-      <div className="">
+      <div className="component">
         <Header />
       </div>
 
       {/* Компонент 2 */}
-      <div className="component component-2">
-        <StartPages />
+      <div className="component">
+        <StartPagesTwo />
       </div>
 
       {/* Компонент 3 */}
-      <div className="component component-3">
+      <div className="component">
         <h2>Компонент 3</h2>
         <p>Третий полноэкранный компонент</p>
         <button onClick={handleBack} className="nav-button">

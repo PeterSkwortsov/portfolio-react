@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import StartPages from "../../pages/StartPages";
-import { Link } from "react-router-dom";
-import { Router } from "react-router-dom";
+
 
 export const UI = () => {
   const [isHovered, setIsHovered] = useState(false);

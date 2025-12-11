@@ -18,9 +18,7 @@ export const UI = () => {
   }, []);
 
   const handleClick = (e) => {
-    e.stopPropagation();
-    // Переход на страницу StartPages
-    navigate("/StartPages");
+    navigate("/second");
   };
 
   return (

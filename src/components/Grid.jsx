@@ -1,14 +1,13 @@
 import React from 'react'
-import Image from "next/image";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Grid = () => {
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/letan.png"
               width={200}
               height={200}
@@ -30,9 +29,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/london.png"
               width={200}
               height={200}
@@ -59,9 +58,9 @@ const Grid = () => {
           </div>
         </div>
         {/* game-attractions */}
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/family.png"
               width={200}
               height={200}
@@ -85,9 +84,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/studia.png"
               width={200}
               height={200}
@@ -111,9 +110,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/time.png"
               width={200}
               height={200}
@@ -135,9 +134,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/game.png"
               width={200}
               height={200}
@@ -159,9 +158,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/ball.png"
               width={200}
               height={200}
@@ -183,9 +182,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/stadium.png"
               width={200}
               height={200}
@@ -209,9 +208,9 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 image-full w-auto shadow-sm">
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
           <figure>
-            <Image
+            <img
               src="/cubes.jpg"
               width={200}
               height={200}

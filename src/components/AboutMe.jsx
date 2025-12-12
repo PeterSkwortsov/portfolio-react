@@ -80,12 +80,14 @@ export default function AboutMe() {
           </div>
 
           {/* Правая колонка - Детальная информация */}
-          <div className="space-y-6 ">
+          <div className="space-y-6 gap-4">
             {/* Табы */}
-            <div className="tabs tabs-boxed bg-base-200 p-1 rounded-2xl ">
+            <div className="flex gap-2 ">
               <button
-                className={`tab tab-lg flex-1 text-md font-bold ${
-                  activeTab === "about" ? "tab-active" : ""
+                className={`tab ${
+                  activeTab === 0
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-200 text-gray-700"
                 }`}
                 onClick={() => setActiveTab("about")}
               >
@@ -118,7 +120,9 @@ export default function AboutMe() {
                     эмоции. Именно поэтому я стал углубляться в возможности
                     Three.js и объемной графики.
                     <br /> Самостоятельно освоил фронтенд-разработку через
-                    создание pet-проектов и изучение документации. Первый коммерческий проект реализовал через три месяца после начала обучения, затем создавал сайты для друзей и знакомых. 
+                    создание pet-проектов и изучение документации. Первый
+                    коммерческий проект реализовал через три месяца после начала
+                    обучения, затем создавал сайты для друзей и знакомых.
                     <br /> Горю желанием присоединиться к команде, где смогу
                     быть полезным и развиваться профессионально.
                   </p>

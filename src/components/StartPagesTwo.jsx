@@ -23,11 +23,11 @@ export default function StartPages() {
   };
 
   return (
-    <section id="about" className="h-screen px-4">
+    <section id="about" className="h-full px-4">
       <div className="max-w-6xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-16 rounded-2xl color-white">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient bg-300% mb-4 ">
             Обо мне
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
@@ -56,8 +56,8 @@ export default function StartPages() {
             </div>
 
             {/* Краткая информация */}
-            <div className="rounded-2xl p-6 text-center text-white">
-              <div className="grid grid-cols-1 gap-4 text-sm">
+            <div className=" text-center text-white">
+              <div className="grid grid-cols-1 gap-1 text-sm">
                 <div>
                   <span className="font-bold text-lg">Город:</span>
                   <p>Нижний Новгород</p>

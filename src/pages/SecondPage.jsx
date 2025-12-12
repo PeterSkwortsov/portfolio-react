@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import StartPagesTwo from "../components/StartPagesTwo";
 import Header from '../components/Header';
-
+import Grid from "../components/Grid";
 const SecondPage = () => {
   const navigate = useNavigate();
 
@@ -20,6 +20,9 @@ const SecondPage = () => {
       {/* Компонент 2 */}
       <div className="component">
         <StartPagesTwo />
+      </div>
+      <div className="component">
+        <Grid />
       </div>
 
       {/* Компонент 3 */}

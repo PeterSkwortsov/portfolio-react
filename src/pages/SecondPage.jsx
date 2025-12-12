@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import StartPagesTwo from "../components/StartPagesTwo";
 import Header from '../components/Header';
 import Grid from "../components/Grid";
+import TimelineComponent from "../components/Line";
+import Phone from "../components/Phone";
 const SecondPage = () => {
   const navigate = useNavigate();
 
@@ -27,12 +29,21 @@ const SecondPage = () => {
 
       {/* Компонент 3 */}
       <div className="component">
-        <h2>Компонент 3</h2>
-        <p>Третий полноэкранный компонент</p>
-        <button onClick={handleBack} className="nav-button">
-          Вернуться на главную
-        </button>
+        <TimelineComponent />
       </div>
+      <div className="component">
+        <Phone />
+      </div>
+      <div className="component">
+        {/* <Like /> */}
+      </div>
+      {/* <div className="component">
+        <TimelineComponent />
+      </div> */}
+
+      <button onClick={handleBack} className="nav-button">
+        Вернуться на главную
+      </button>
     </div>
   );
 };

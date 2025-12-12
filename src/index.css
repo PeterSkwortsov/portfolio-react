@@ -68,25 +68,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    /* padding: 40px; */
     text-align: center;
 }
 
-.component-1 {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
+
+
+
+.h-phone {
+    height: 380px;
 }
-
-.component-2 {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
-}
-
-.component-3 {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-    color: white;
-}
-
-
-
-

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
-// import DownloadWordFile from "./DownloadWordFile";
-// import TechnologiesList from "./TechnologiesList";
+import DownloadWordFile from "./DownloadWordFile";
+import TechnologiesList from "./TechnologiesList";
 import { NavLink } from "react-router-dom";
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState("about");
@@ -24,7 +24,7 @@ export default function AboutMe() {
   };
 
   return (
-    <section id="about" className="h-screen py-20 px-4">
+    <section id="about" className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-16 rounded-2xl">
@@ -80,14 +80,12 @@ export default function AboutMe() {
           </div>
 
           {/* Правая колонка - Детальная информация */}
-          <div className="space-y-6 gap-4">
+          <div className="space-y-6 ">
             {/* Табы */}
-            <div className="flex gap-2 ">
+            <div className="tabs tabs-boxed bg-base-200 p-1 rounded-2xl ">
               <button
-                className={`tab ${
-                  activeTab === 0
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700"
+                className={`tab tab-lg flex-1 text-md font-bold ${
+                  activeTab === "about" ? "tab-active" : ""
                 }`}
                 onClick={() => setActiveTab("about")}
               >
@@ -128,7 +126,7 @@ export default function AboutMe() {
                   </p>
 
                   <div className="flex gap-4 mt-6">
-                    {/* <DownloadWordFile /> */}
+                    <DownloadWordFile />
                   </div>
                 </div>
               )}
@@ -139,7 +137,7 @@ export default function AboutMe() {
 
                   <div>
                     <div className="flex flex-wrap gap-2 justify-center">
-                      {/* <TechnologiesList /> */}
+                      <TechnologiesList />
                     </div>
                   </div>
 

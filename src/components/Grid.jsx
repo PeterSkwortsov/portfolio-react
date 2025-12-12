@@ -1,28 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 const Grid = () => {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
+      <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/letan.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/letan.png"
+            width={100}
+            height={100}
+            alt="Picture of the author"
+            style={{ width: "100%" }}
+          />
           <div className="card-body">
-            <h2 className="card-title" id="1">
-              Каталог картин художников
-            </h2>
-            <p>На React. Адаптивная верстка. Свой дизайн.</p>
-            <div className="card-actions justify-start items-end z-20 ">
+            <div className="card-actions justify-center items-center z-20 ">
+              <h2 className="card-title mt-2" id="1">
+                Каталог картин художников
+              </h2>
+              <p>На React. Адаптивная верстка. Свой дизайн.</p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl">
+                <button className="btn btn-neutral bg-white text-black rounded-xl mt-2">
                   <Link href="./gallery">Подробнее</Link>
                 </button>
               </div>
@@ -30,15 +27,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/london.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/london.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "100%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="2">
               Сеть детских аттракционов в Нижнем Новгороде
@@ -59,15 +54,13 @@ const Grid = () => {
         </div>
         {/* game-attractions */}
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/family.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/family.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "100%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="3">
               Сайт проекта «История семьи»
@@ -85,15 +78,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/studia.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </figure>
+          <img
+            src="/studia.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "100%", height: "100%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="4">
               Творческая студия «Вики Борщ»
@@ -111,15 +102,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/time.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </figure>
+          <img
+            src="/time.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "100%", height: "100%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="4">
               Лендинг часов
@@ -135,15 +124,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/game.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/game.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "200%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="5">
               Игра в мяч
@@ -159,15 +146,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/ball.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/ball.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "200%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="6">
               Техника раскадровки кадров
@@ -183,15 +168,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/stadium.png"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/stadium.png"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "200%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="7">
               Интерактивное бронирование билетов
@@ -209,15 +192,13 @@ const Grid = () => {
           </div>
         </div>
         <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <figure>
-            <img
-              src="/cubes.jpg"
-              width={200}
-              height={200}
-              alt="Picture of the author"
-              style={{ width: "200%" }}
-            />
-          </figure>
+          <img
+            src="/cubes.jpg"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            style={{ width: "200%" }}
+          />
           <div className="card-body">
             <h2 className="card-title" id="7">
               Интерактивный переход между страницами
@@ -237,6 +218,6 @@ const Grid = () => {
       </div>
     </>
   );
-}
+};
 
-export default Grid
+export default Grid;

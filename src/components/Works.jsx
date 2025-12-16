@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Development from "../components/worksFiles/Development";
-// import ProductDesign from "../components/worksFiles/ProductDesign";
-// import WebDesign from "./WebDesign";
+import WebDesign from "../components/worksFiles/WebDesign";
 // import ChairPage from "./ChairPage";
 // import Cloud from "./Cloud";
 // import Rules from "./Rules";
@@ -101,8 +100,8 @@ const Works = () => {
   return (
     <>
       <div className="text-center mb-12">
-        <h3 className="text-3xl md:text-3xl font-bold text-white mb-4 p-2">
-          Различные технологии и техники
+        <h3 className="text-3xl md:text-3xl bg-gradient-to-r font-bold from-primary to-secondary bg-clip-text text-transparent mb-4 p-2">
+          Демонстрация технологий и техник
         </h3>
       </div>
       <Section>
@@ -139,7 +138,7 @@ const Works = () => {
           </Left>
           <Right>
             {activeItem === "Wow-эффекты" ? (
-              <Development />
+              <WebDesign />
             ) : activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Демонстрация" ? (

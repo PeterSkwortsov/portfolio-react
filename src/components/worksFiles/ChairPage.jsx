@@ -1,9 +1,9 @@
 
 import React, { Suspense } from "react";
 import styled from "styled-components";
-
+import { Bounds, ContactShadows } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Loader } from "@react-three/drei";
+import { Environment, Loader } from "@react-three/drei";
 import { Center } from "@react-three/drei";
 import Pirates from "../worksFiles/Pirate";
 import { OrbitControls } from "@react-three/drei";
@@ -11,21 +11,16 @@ import { OrbitControls } from "@react-three/drei";
 const ChairPage = () => {
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 5] }}>
+      <Canvas camera={{ position: [0, 2, 5] }}>
+        <OrbitControls />
         <Suspense fallback={null}>
-          <color attach="background" args={["#61b6ff"]} />
-          <directionalLight position={[1, 2, 3]} intensity={4} />
-          <ambientLight intensity={0.7} />
-          <Center>
+          <Environment
+            preset="dawn"
+            background={false}
+           
+          />
             <Pirates />
-            <OrbitControls
-              autoRotate
-              autoRotateSpeed={3}
-              enableZoom={false}
-              enablePan={false}
-              enableRotate={true}
-            />
-          </Center>
+        
         </Suspense>
       </Canvas>
       <Loader />

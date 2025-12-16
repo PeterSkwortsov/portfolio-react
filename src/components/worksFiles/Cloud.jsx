@@ -1,6 +1,6 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 import CustomSheaderMaterial from "three-custom-shader-material/vanilla";
@@ -143,29 +143,7 @@ export default function ModelWithGUI() {
 
       <Canvas shadows>
         <OrbitControls />
-        <ambientLight intensity={1} />
-        <directionalLight
-          position={[5, 5, 5]}
-          intensity={5}
-          castShadow
-          shadow-mapSize-width={2048}
-          shadow-mapSize-height={2048}
-          shadow-camera-far={50}
-          shadow-camera-left={-10}
-          shadow-camera-right={10}
-          shadow-camera-top={10}
-          shadow-camera-bottom={-10}
-        />
-        {/* Точечный свет */}
-        {/* Плоскость для отображения теней */}
-        <mesh
-          rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, -2, 0]}
-          receiveShadow
-        >
-          <planeGeometry args={[10, 10]} />
-          <meshStandardMaterial color="#f0f0f0" />
-        </mesh>
+        <Environment preset="warehouse" background={true} />
         {/* Ваша модель */}
         <ModelScene guiContainer={guiContainer} />
       </Canvas>

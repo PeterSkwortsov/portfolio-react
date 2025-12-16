@@ -70,7 +70,7 @@ export default function Header() {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style>{`
         @keyframes gradient {
           0% {
             background-position: 0% 50%;

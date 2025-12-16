@@ -116,7 +116,6 @@ export default function App() {
             alt="Описание изображения"
             width={50}
             height={50}
-            priority // Для выше-the-fold изображений
             style={{
               margin: "0 auto",
               marginTop: "20px",

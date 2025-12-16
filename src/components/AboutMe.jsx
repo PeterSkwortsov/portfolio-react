@@ -97,7 +97,7 @@ export default function AboutMe() {
                 }`}
                 onClick={() => setActiveTab("skills")}
               >
-                О себе
+                Навыки
               </button>
               <button
                 className={`tab tab-lg flex-1 text-sm font-bold ${

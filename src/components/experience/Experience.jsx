@@ -22,14 +22,14 @@ export const Experience = () => {
     await controls.current.dolly(19, true); // Камера отъезжает
 
     // Ждем немного
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 50));
 
     // Активируем приближение текста
     textTarget.current.position.z = 8; // Цель - текст на позиции -3 (ближе к нам)
     textTarget.current.scale = 1; // Увеличиваем текст
 
     // Ждем, пока текст приблизится
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Возвращаем камеру
     await controls.current.dolly(19, true);

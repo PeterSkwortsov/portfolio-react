@@ -10,7 +10,8 @@ import { OrbitControls } from "@react-three/drei";
 
 const ChairPage = () => {
   return (
-    <>
+    <div
+    className="h-96">
       <Canvas camera={{ position: [0, 2, 5] }}>
         <OrbitControls />
         <Suspense fallback={null}>
@@ -28,7 +29,7 @@ const ChairPage = () => {
         We design products with a strong focus on both world class design and
         ensuring your product is a market success.
       </Desc> */}
-    </>
+    </div>
   );
 };
 

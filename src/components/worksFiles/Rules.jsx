@@ -7,12 +7,104 @@ import Kitchen2 from "../worksFiles/Kitchen2";
 import { Center } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
+import { useEffect } from "react";
+import { Loader } from "@react-three/drei";
 
+function FloatingText({
+  distance = 5,
+  offsetX = 0,
+  offsetY = 0,
+  followCamera = true,
+  billboard = true,
+  visible = true,
+  fadeDistance = 0,
+  children,
+  onPositionUpdate,
+  ...htmlProps
+}) {
+  const ref = useRef();
+  const htmlRef = useRef();
+  const { camera, size } = useThree();
+  const [opacity, setOpacity] = useState(1);
 
-export default function Rules() {
-  
+  useFrame(() => {
+    if (!ref.current || !visible) return;
+
+    // Получаем направление взгляда камеры
+    const direction = new THREE.Vector3(0, 0, -1);
+    direction.applyQuaternion(camera.quaternion);
+
+    // Вычисляем позицию
+    const position = camera.position
+      .clone()
+      .add(direction.multiplyScalar(distance))
+      .add(new THREE.Vector3(offsetX, offsetY, 0));
+
+    ref.current.position.copy(position);
+
+    // Billboarding - всегда смотреть на камеру
+    if (billboard) {
+      ref.current.lookAt(camera.position);
+    }
+
+    // Обновление прозрачности в зависимости от расстояния
+    if (fadeDistance > 0) {
+      const camDistance = camera.position.distanceTo(ref.current.position);
+      const newOpacity = Math.max(
+        0,
+        1 - (camDistance - distance) / fadeDistance
+      );
+      setOpacity(newOpacity);
+    }
+
+    // Колбэк при обновлении позиции
+    if (onPositionUpdate) {
+      onPositionUpdate(position);
+    }
+  });
+
+  // Автоматический размер в зависимости от расстояния до камеры
+  useEffect(() => {
+    if (!htmlRef.current) return;
+
+    const updateSize = () => {
+      const camDistance = camera.position.distanceTo(
+        ref.current?.position || new THREE.Vector3()
+      );
+      const scale = Math.max(0.3, Math.min(2, 5 / camDistance));
+
+      if (htmlRef.current) {
+        htmlRef.current.style.transform = `scale(${scale})`;
+      }
+    };
+
+    updateSize();
+  }, [camera, size]);
+
+  if (!visible) return null;
+
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <group ref={ref}>
+      <Html
+        ref={htmlRef}
+        center
+        style={{
+          pointerEvents: "none",
+          opacity: opacity,
+          transition: "opacity 0.3s ease",
+          transformOrigin: "center center",
+        }}
+        {...htmlProps}
+      >
+        {children}
+      </Html>
+    </group>
+  );
+}
+export default function Rules({ title, content, icon = "ℹ️", distance = 5, ...props }) {
+  return (
+    <div style={{ width: "100%", height: "400px" }}>
       <Canvas
         camera={{
           position: [0, 0, 5],
@@ -20,7 +112,7 @@ export default function Rules() {
         }}
         shadows
       >
-        <OrbitControls />
+        <Loader />
         <Environment
           preset="dawn" // или "city", "sunset", "dawn", "night"
           background={true} // если true - будет как фон
@@ -28,6 +120,44 @@ export default function Rules() {
         <CameraButtons />
         <Center>
           <Kitchen2 />
+          <FloatingText distance={distance} {...props}>
+            <div
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(30,30,30,0.9) 50%)",
+                color: "white",
+                padding: "8px",
+                borderRadius: "12px",
+                border: "1px solid rgba(0, 255, 255, 0.3)",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
+                backdropFilter: "blur(10px)",
+                width: "150px",
+                transform: "translateZ(0)",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "-8px",
+                }}
+              >
+               
+              </div>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "14px",
+                  lineHeight: "1.5",
+                  color: "#cccccc",
+                }}
+              >
+                Вы можете путешествоать по квартире 
+              </p>
+              
+            </div>
+          </FloatingText>
         </Center>
       </Canvas>
     </div>
@@ -124,60 +254,59 @@ function CameraButtons() {
   const buttons = [
     {
       id: 1,
-      label: "Кнопка 1",
+      label: "Вперед",
       onClick: () => cameraPresets.front(),
       active: activeView === "front",
     },
     {
       id: 2,
-      label: "Кнопка 2",
+      label: "Назад",
       onClick: () => cameraPresets.back(),
       active: activeView === "back",
     },
     {
       id: 3,
-      label: "Кнопка 3",
+      label: "Налево",
       onClick: () => cameraPresets.left(),
       active: activeView === "left",
     },
     {
       id: 4,
-      label: "Кнопка 4",
+      label: "Направо",
       onClick: () => cameraPresets.right(),
       active: activeView === "right",
     },
     {
       id: 5,
-      label: "Кнопка 5",
+      label: "Вниз",
       onClick: () => cameraPresets.top(),
       active: activeView === "top",
     },
 
     {
       id: 6,
-      label: "Кнопка 6",
+      label: "Вверх",
       onClick: () => cameraPresets.bottom(),
       active: activeView === "bottom",
     },
     {
       id: 7,
-      label: "Кнопка 7",
+      label: "Диагональ",
       onClick: () => cameraPresets.diagonal(),
       active: activeView === "diagonal",
     },
     {
       id: 8,
-      label: "Кнопка 8",
+      label: "Назад",
       onClick: () => cameraPresets.close(),
       active: activeView === "close",
     },
     {
       id: 9,
-      label: "Кнопка 9",
+      label: "Отдалить",
       onClick: () => cameraPresets.far(),
       active: activeView === "far",
-    }
-    
+    },
   ];
 
   return (

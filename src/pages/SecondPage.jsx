@@ -23,7 +23,7 @@ const SecondPage = () => {
         <Header />
       </div>
 
-      {/* <div className="component">
+      <div className="component">
         <AboutMe />
       </div>
       <div className="component">
@@ -38,7 +38,7 @@ const SecondPage = () => {
       </div>
       <div className="component">
         <Like />
-      </div> */}
+      </div>
       <div className="component">
         <Superpower />
       </div>

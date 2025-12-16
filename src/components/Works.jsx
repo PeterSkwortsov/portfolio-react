@@ -79,7 +79,7 @@ const Right = styled.div`
 const items = [
   "Wow-эффекты",
   "Шейдеры",
-  "Демонстрация",
+  "Движение",
   "Разрез детали",
   "Управление камерой",
   "Карточки товаров",
@@ -142,7 +142,7 @@ const Works = () => {
               <WebDesign />
             ) : activeItem === "Шейдеры" ? (
               <Development />
-            ) : activeItem === "Демонстрация" ? (
+            ) : activeItem === "Движение" ? (
               <ChairPage />
             ) : activeItem === "Разрез детали" ? (
               <Cloud />

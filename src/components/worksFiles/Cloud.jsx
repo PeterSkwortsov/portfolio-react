@@ -1,6 +1,6 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Loader, OrbitControls, useGLTF } from "@react-three/drei";
+import { Loader, OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 import CustomSheaderMaterial from "three-custom-shader-material/vanilla";
@@ -140,11 +140,14 @@ export default function ModelWithGUI() {
           zIndex: 1000,
         }}
       />
-      <Loader />
 
       <Canvas shadows>
+        <Loader />
+
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[0, 0, 5]} intensity={3} />
         <OrbitControls />
-        <Environment preset="warehouse" background={true} />
+
         {/* Ваша модель */}
         <ModelScene guiContainer={guiContainer} />
       </Canvas>

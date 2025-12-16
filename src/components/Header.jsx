@@ -52,7 +52,7 @@ export default function Header() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-xl md:text-2xl text-gray-300 font-light">
+          <p className="text-xl md:text-2xl text-gray-300 font-light p-2">
             Frontend-разработчик с уклоном на 3D
           </p>
         </div>

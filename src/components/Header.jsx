@@ -53,7 +53,7 @@ export default function Header() {
           }`}
         >
           <p className="text-xl md:text-2xl text-gray-300 font-light p-2">
-            Frontend-разработчик с уклоном на 3D
+            Frontend-разработчик<br/> повернутый на 3D
           </p>
         </div>
 

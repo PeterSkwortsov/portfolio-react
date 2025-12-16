@@ -1,4 +1,3 @@
-
 import * as THREE from "three";
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -8,6 +7,7 @@ import {
   Sky as SkyImpl,
   OrbitControls,
   Loader,
+  Environment,
 } from "@react-three/drei";
 
 import { useState } from "react";
@@ -20,7 +20,8 @@ export default function App() {
       <div className="absolute inset-0 z-0">
         <Suspense fallback={null}>
           <Canvas camera={{ position: [0, -10, 10], fov: 75 }}>
-            {/* <Sky /> */}
+            
+            <Sky />
             <ambientLight intensity={Math.PI / 1.5} />
             <spotLight
               position={[0, 40, 0]}
@@ -116,6 +117,7 @@ export default function App() {
             alt="Описание изображения"
             width={50}
             height={50}
+            priority // Для выше-the-fold изображений
             style={{
               margin: "0 auto",
               marginTop: "20px",
@@ -127,56 +129,56 @@ export default function App() {
   );
 }
 
-// function Sky() {
-//   const ref = useRef();
-//   const cloud0 = useRef();
+function Sky() {
+  const ref = useRef();
+  const cloud0 = useRef();
 
-//   useFrame((state, delta) => {
-//     ref.current.rotation.y = Math.cos(state.clock.elapsedTime / 2) / 2;
-//     ref.current.rotation.x = Math.sin(state.clock.elapsedTime / 2) / 2;
-//     // cloud0.current.rotation.y -= delta;
-//   });
-//   return (
-//     <>
-//       <SkyImpl />
-//       <group ref={ref}>
-//         <Clouds material={THREE.MeshLambertMaterial} limit={400}>
-//           {/* <Cloud ref={cloud0} bounds={[2, 7, 9]} color={"red"} /> */}
-//           <Cloud
-//             bounds={[1, 3, 4]}
-//             color="#eed0d0"
-//             seed={1}
-//             position={[15, 0, 0]}
-//           />
-//           {/* <Cloud
-//             bounds={[3, 5, 14]}
-//             color="purple"
-//             seed={1}
-//             position={[-15, 0, 0]}
-//           />*/}
-//           <Cloud
-//             bounds={[5, 12, 3]}
-//             color="#a0b0d0"
-//             seed={1}
-//             position={[0, 0, -12]}
-//           />
-//           {/* <Cloud
-//             bounds={[2, 10, 17]}
-//             color="purple"
-//             seed={1}
-//             position={[0, 0, 12]}
-//           /> */}
-//           <Cloud
-//             concentrate="outside"
-//             growth={100}
-//             color="blue"
-//             opacity={0.25}
-//             seed={0.3}
-//             bounds={200}
-//             volume={200}
-//           />
-//         </Clouds>
-//       </group>
-//     </>
-//   );
-// }
+  useFrame((state, delta) => {
+    ref.current.rotation.y = Math.cos(state.clock.elapsedTime / 2) / 2;
+    ref.current.rotation.x = Math.sin(state.clock.elapsedTime / 2) / 2;
+    // cloud0.current.rotation.y -= delta;
+  });
+  return (
+    <>
+      <SkyImpl />
+      <group ref={ref}>
+        <Clouds material={THREE.MeshLambertMaterial} limit={400}>
+          {/* <Cloud ref={cloud0} bounds={[2, 7, 9]} color={"red"} /> */}
+          <Cloud
+            bounds={[1, 3, 4]}
+            color="#eed0d0"
+            seed={1}
+            position={[15, 0, 0]}
+          />
+          {/* <Cloud
+            bounds={[3, 5, 14]}
+            color="purple"
+            seed={1}
+            position={[-15, 0, 0]}
+          />*/}
+          <Cloud
+            bounds={[5, 12, 3]}
+            color="#a0b0d0"
+            seed={1}
+            position={[0, 0, -12]}
+          />
+          {/* <Cloud
+            bounds={[2, 10, 17]}
+            color="purple"
+            seed={1}
+            position={[0, 0, 12]}
+          /> */}
+          <Cloud
+            concentrate="outside"
+            growth={100}
+            color="blue"
+            opacity={0.25}
+            seed={0.3}
+            bounds={200}
+            volume={200}
+          />
+        </Clouds>
+      </group>
+    </>
+  );
+}

@@ -4,7 +4,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Clouds,
   Cloud,
-  Sky as SkyImpl,
   OrbitControls,
   Loader,
   Environment,
@@ -19,8 +18,11 @@ export default function App() {
     <div className="relative w-full mt-20 h-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Suspense fallback={null}>
-          <Canvas camera={{ position: [0, -10, 10], fov: 75 }}>
-            
+          <Canvas camera={{ position: [0, -10, 10], fov: 40 }}>
+            <Environment
+              files="/kloppenheim_06_puresky_1k.hdr" // Путь к вашему HDRI
+              background={true}
+            />
             <Sky />
             <ambientLight intensity={Math.PI / 1.5} />
             <spotLight
@@ -140,7 +142,6 @@ function Sky() {
   });
   return (
     <>
-      <SkyImpl />
       <group ref={ref}>
         <Clouds material={THREE.MeshLambertMaterial} limit={400}>
           {/* <Cloud ref={cloud0} bounds={[2, 7, 9]} color={"red"} /> */}
@@ -150,24 +151,24 @@ function Sky() {
             seed={1}
             position={[15, 0, 0]}
           />
-          {/* <Cloud
+          <Cloud
             bounds={[3, 5, 14]}
             color="purple"
             seed={1}
             position={[-15, 0, 0]}
-          />*/}
+          />
           <Cloud
             bounds={[5, 12, 3]}
             color="#a0b0d0"
             seed={1}
             position={[0, 0, -12]}
           />
-          {/* <Cloud
+          <Cloud
             bounds={[2, 10, 17]}
             color="purple"
             seed={1}
             position={[0, 0, 12]}
-          /> */}
+          />
           <Cloud
             concentrate="outside"
             growth={100}

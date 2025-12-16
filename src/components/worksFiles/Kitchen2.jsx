@@ -5,6 +5,9 @@ import { useGLTF } from "@react-three/drei";
 export default function Kitchen2(...props) {
   const { nodes, materials } = useGLTF("/kitchen2.glb");
 
+
+
+
   return (
     <group {...props} dispose={null} scale={2}>
       <group rotation={[-Math.PI / 2, 0, 0]}>

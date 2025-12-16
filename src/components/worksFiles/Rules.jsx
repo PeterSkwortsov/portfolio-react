@@ -8,52 +8,9 @@ import { Center } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 
-// function ComplexLightMovement() {
-//   const groupRef = useRef();
 
-//   useFrame((state) => {
-//     if (groupRef.current) {
-//       // Вращение всей группы
-//       groupRef.current.rotation.y = state.clock.getElapsedTime() * 0.5;
-
-//       // Пульсация света
-//       const intensity = 0.8 + Math.sin(state.clock.getElapsedTime() * 2) * 0.2;
-//       groupRef.current.children[0].intensity = intensity;
-//     }
-//   });
-
-//   return (
-//     <group>
-//       {/* Стены и пол */}
-//       <ambientLight intensity={2} />
-//       <mesh>
-//         <boxGeometry args={[10, 5, 10]} />
-//         <meshStandardMaterial color="#f5f5f5" roughness={0.7} metalness={0.1} />
-//       </mesh>
-
-//       {/* Самосветящиеся панели (как светильники) */}
-//       <mesh position={[0, 2.4, -4.9]}>
-//         <planeGeometry args={[3, 0.5]} />
-//         <meshStandardMaterial
-//           color="#ffffff"
-//           emissive="#fff8e1"
-//           emissiveIntensity={2} // Интенсивность свечения
-//         />
-//       </mesh>
-
-//       {/* Лампа */}
-//       <mesh position={[0, 2.5, 0]}>
-//         <sphereGeometry args={[0.3, 32, 32]} />
-//         <meshStandardMaterial
-//           color="#ffffff"
-//           emissive="#fff8e1"
-//           emissiveIntensity={3}
-//         />
-//       </mesh>
-//     </group>
-//   );
-// }
 export default function Rules() {
+  
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <Canvas
@@ -63,13 +20,12 @@ export default function Rules() {
         }}
         shadows
       >
+        <OrbitControls />
         <Environment
           preset="dawn" // или "city", "sunset", "dawn", "night"
-          background={false} // если true - будет как фон
-          blur={0.5} // размытие окружения
+          background={true} // если true - будет как фон
         />
         <CameraButtons />
-        {/* <ComplexLightMovement /> */}
         <Center>
           <Kitchen2 />
         </Center>
@@ -80,7 +36,6 @@ export default function Rules() {
 
 function CameraButtons() {
   const [activeView, setActiveView] = useState("default");
-  const cameraRef = useRef();
 
   // Получаем камеру и элементы управления через useThree
   const { camera, gl } = require("@react-three/fiber").useThree();
@@ -179,14 +134,50 @@ function CameraButtons() {
       onClick: () => cameraPresets.back(),
       active: activeView === "back",
     },
-    { id: 3, label: "Кнопка 3", onClick: () => console.log("Кнопка 3") },
-    { id: 4, label: "Кнопка 4", onClick: () => console.log("Кнопка 4") },
-    { id: 5, label: "Кнопка 5", onClick: () => console.log("Кнопка 5") },
-    { id: 6, label: "Кнопка 6", onClick: () => console.log("Кнопка 6") },
-    { id: 7, label: "Кнопка 7", onClick: () => console.log("Кнопка 7") },
-    { id: 8, label: "Кнопка 8", onClick: () => console.log("Кнопка 8") },
-    { id: 9, label: "Кнопка 9", onClick: () => console.log("Кнопка 9") },
-    { id: 10, label: "Кнопка 10", onClick: () => console.log("Кнопка 10") },
+    {
+      id: 3,
+      label: "Кнопка 3",
+      onClick: () => cameraPresets.left(),
+      active: activeView === "left",
+    },
+    {
+      id: 4,
+      label: "Кнопка 4",
+      onClick: () => cameraPresets.right(),
+      active: activeView === "right",
+    },
+    {
+      id: 5,
+      label: "Кнопка 5",
+      onClick: () => cameraPresets.top(),
+      active: activeView === "top",
+    },
+
+    {
+      id: 6,
+      label: "Кнопка 6",
+      onClick: () => cameraPresets.bottom(),
+      active: activeView === "bottom",
+    },
+    {
+      id: 7,
+      label: "Кнопка 7",
+      onClick: () => cameraPresets.diagonal(),
+      active: activeView === "diagonal",
+    },
+    {
+      id: 8,
+      label: "Кнопка 8",
+      onClick: () => cameraPresets.close(),
+      active: activeView === "close",
+    },
+    {
+      id: 9,
+      label: "Кнопка 9",
+      onClick: () => cameraPresets.far(),
+      active: activeView === "far",
+    }
+    
   ];
 
   return (
@@ -213,17 +204,3 @@ function CameraButtons() {
   );
 }
 
-function getButtonStyle(isActive) {
-  return {
-    padding: "10px 15px",
-    background: isActive ? "#ff6b6b" : "rgba(255,255,255,0.1)",
-    color: "white",
-    border: "2px solid " + (isActive ? "#ff6b6b" : "rgba(255,255,255,0.3)"),
-    borderRadius: "8px",
-    cursor: "pointer",
-    fontSize: "14px",
-    fontWeight: "bold",
-    backdropFilter: "blur(10px)",
-    transition: "all 0.3s ease",
-  };
-}

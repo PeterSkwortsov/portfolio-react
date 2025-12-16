@@ -100,13 +100,14 @@ export default function TimelineComponent() {
               {timelineData.map((item, index) => (
                 <div key={index} className="relative flex">
                   {/* Точка на линии */}
-              
 
                   {/* Контент */}
                   <div className="px-5 flex-1">
                     <div
                       className={`bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 ${
-                        activeDate === index ? "ring-5 ring-blue-500" : ""
+                        activeDate === index
+                          ? "bg-purple-200"
+                          : "bg-blue-600 transform scale-80 shadow-lg"
                       }`}
                       onClick={() => setActiveDate(index)}
                     >

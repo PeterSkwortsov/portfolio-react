@@ -82,9 +82,9 @@ export default function AboutMe() {
           {/* Правая колонка - Детальная информация */}
           <div className="space-y-6 ">
             {/* Табы */}
-            <div className="tabs tabs-boxed bg-base-200 p-1 rounded-2xl ">
+            <div className="tabs tabs-boxed bg-base-200 p-1 rounded-2xl">
               <button
-                className={`tab tab-lg flex-1 text-md font-bold ${
+                className={`tab tab-lg flex-1 text-sm font-bold ${
                   activeTab === "about" ? "tab-active" : ""
                 }`}
                 onClick={() => setActiveTab("about")}
@@ -92,16 +92,16 @@ export default function AboutMe() {
                 О себе
               </button>
               <button
-                className={`tab tab-lg flex-1 font-bold ${
+                className={`tab tab-lg flex-1 text-sm font-bold ${
                   activeTab === "skills" ? "tab-active" : ""
                 }`}
                 onClick={() => setActiveTab("skills")}
               >
-                Навыки
+                О себе
               </button>
               <button
-                className={`tab tab-lg flex-1 font-bold${
-                  activeTab === "contact" ? "tab-active font-bold" : ""
+                className={`tab tab-lg flex-1 text-sm font-bold ${
+                  activeTab === "contact" ? "tab-active " : ""
                 }`}
                 onClick={() => setActiveTab("contact")}
               >
@@ -113,7 +113,7 @@ export default function AboutMe() {
             <div className="bg-base-200 rounded-2xl p-6">
               {activeTab === "about" && (
                 <div className="space-y-4">
-                  <p className="text-md leading-relaxed font-sans">
+                  <p className="text-md leading-relaxed font-sans text-white">
                     Мне хочется удивлять людей, создавать вещи, которые вызывают
                     эмоции. Именно поэтому я стал углубляться в возможности
                     Three.js и объемной графики.
@@ -133,7 +133,7 @@ export default function AboutMe() {
 
               {activeTab === "skills" && (
                 <div className="">
-                  <h4 className="font-semibold text-lg">Frontend</h4>
+                  <h4 className="font-semibold text-lg text-white">Frontend</h4>
 
                   <div>
                     <div className="flex flex-wrap gap-2 justify-center">
@@ -142,7 +142,9 @@ export default function AboutMe() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-lg mt-3">Инструменты</h4>
+                    <h4 className="font-semibold text-lg mt-3 text-white">
+                      Инструменты
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {skills.tools.map((skill) => (
                         <span
@@ -159,7 +161,7 @@ export default function AboutMe() {
 
               {activeTab === "contact" && (
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-3 bg-base-100 rounded-lg">
+                  <div className="flex items-center text-white justify-center gap-4 p-3 bg-base-100 rounded-lg">
                     <div>
                       <p className="font-semibold">Email</p>
                       <p className="text-base-content/80">
@@ -168,7 +170,7 @@ export default function AboutMe() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 p-3 bg-base-100 rounded-lg">
+                  <div className="flex items-center justify-center gap-4 p-3 bg-base-100 rounded-lg">
                     <div>
                       <NavLink
                         href="https://github.com/PeterSkwortsov"

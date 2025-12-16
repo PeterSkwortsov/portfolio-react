@@ -88,7 +88,7 @@ export default function StartPages() {
                 }`}
                 onClick={() => setActiveTab("about")}
               >
-                О себе
+                О себе2
               </button>
               <button
                 className={`tab tab-lg flex-1 font-bold ${

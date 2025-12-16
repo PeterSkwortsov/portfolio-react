@@ -5,13 +5,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Clouds,
   Cloud,
-  CameraControls,
   Sky as SkyImpl,
   OrbitControls,
   Loader,
 } from "@react-three/drei";
-import { useEffect } from "react";
-import { degToRad } from "three/src/math/MathUtils";
+
 import { useState } from "react";
 
 export default function App() {

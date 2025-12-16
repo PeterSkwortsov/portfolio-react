@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Development from "../components/worksFiles/Development";
 import WebDesign from "../components/worksFiles/WebDesign";
-// import ChairPage from "./ChairPage";
-// import Cloud from "./Cloud";
+import ChairPage from "../components/worksFiles/ChairPage";
+import Cloud from "../components/worksFiles/Cloud";
+
+
 // import Rules from "./Rules";
 // import PrevCar from "./PrevCar";
 
@@ -17,6 +19,7 @@ const Section = styled.div`
   color: black;
   font-size: 12px;
   font-weight: 300;
+  margin-bottom: 40px;
 `;
 
 const Container = styled.div`
@@ -142,9 +145,9 @@ const Works = () => {
             ) : activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Демонстрация" ? (
-              <Development />
+              <ChairPage />
             ) : activeItem === "Разрез детали" ? (
-              <Development />
+              <Cloud />
             ) : activeItem === "Управление камерой" ? (
               <Development />
             ) : activeItem === "Карточки товаров" ? (

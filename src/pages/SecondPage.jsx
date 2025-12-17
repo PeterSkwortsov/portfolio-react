@@ -5,7 +5,7 @@ import Grid from "../components/Grid";
 import TimelineComponent from "../components/Line";
 import Phone from "../components/Phone";
 import AboutMe from "../components/AboutMe";
-import Like from "../components/CreativeApproachAnimated";
+// import Like from "../components/CreativeApproachAnimated";
 import Superpower from "../components/Superpower";
 import Works from "../components/Works";
 
@@ -36,9 +36,9 @@ const SecondPage = () => {
       <div className="component">
         <Phone />
       </div>
-      <div className="component">
+      {/* <div className="component">
         <Like />
-      </div>
+      </div> */}
       <div className="component">
         <Superpower />
       </div>

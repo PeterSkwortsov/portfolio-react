@@ -138,7 +138,7 @@ const Works = () => {
           </Left>
           <Right>
             {activeItem === "Wow-эффекты" ? (
-              <WebDesign />
+              <Development />
             ) : activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Движение" ? (
@@ -146,7 +146,7 @@ const Works = () => {
             ) : activeItem === "Разрез детали" ? (
               <Cloud />
             ) : activeItem === "Управление камерой" ? (
-              <Development /> 
+              <Development />
             ) : activeItem === "Карточки товаров" ? (
               <Development />
             ) : null}

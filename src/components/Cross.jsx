@@ -95,7 +95,7 @@ const [isOpen, setIsOpen] = useState(false);
                 shadow-mapSize={[1024, 1024]}
               />
 
-              {/* <Model
+              <Model
                 castShadow
                 customColors={{
                   mesh: mesh,
@@ -103,7 +103,7 @@ const [isOpen, setIsOpen] = useState(false);
                   soul: soul,
                   patch: patch,
                 }}
-              /> */}
+              />
               <OrbitControls
                 autoRotate
                 minPolarAngle={Math.PI / 2} // 90 градусов

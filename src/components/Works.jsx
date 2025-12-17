@@ -137,7 +137,7 @@ const Works = () => {
               ))}
             </List>
           </Left>
-          {/* <Right>
+          <Right>
             {activeItem === "Wow-эффекты" ? (
               <WebDesign />
             ) : activeItem === "Шейдеры" ? (
@@ -147,11 +147,11 @@ const Works = () => {
             ) : activeItem === "Разрез детали" ? (
               <Cloud />
             ) : activeItem === "Управление камерой" ? (
-              <Rules />
+              <Development /> // убрал <Rules />
             ) : activeItem === "Карточки товаров" ? (
               <Development />
             ) : null}
-          </Right> */}
+          </Right>
         </Container>
       </Section>
     </>

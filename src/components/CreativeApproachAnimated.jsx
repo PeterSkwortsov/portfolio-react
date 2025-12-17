@@ -145,30 +145,35 @@ function Sky() {
         <Clouds material={THREE.MeshLambertMaterial} limit={400}>
           {/* <Cloud ref={cloud0} bounds={[2, 7, 9]} color={"red"} /> */}
           <Cloud
+            texture={"/cloud.png"}
             bounds={[1, 3, 4]}
             color="#eed0d0"
             seed={1}
             position={[15, 0, 0]}
           />
           <Cloud
+            texture={"/cloud.png"}
             bounds={[3, 5, 14]}
             color="purple"
             seed={1}
             position={[-15, 0, 0]}
           />
           <Cloud
+            texture={"/cloud.png"}
             bounds={[5, 12, 3]}
             color="#a0b0d0"
             seed={1}
             position={[0, 0, -12]}
           />
           <Cloud
+            texture={"/cloud.png"}
             bounds={[2, 10, 17]}
             color="purple"
             seed={1}
             position={[0, 0, 12]}
           />
           <Cloud
+            texture={"/cloud.png"}
             concentrate="outside"
             growth={100}
             color="blue"

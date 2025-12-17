@@ -18,7 +18,7 @@ export default function App() {
     <div className="relative w-full mt-20 h-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Suspense fallback={null}>
-          <Canvas camera={{ position: [0, -10, 10], fov: 40 }}>
+          <Canvas camera={{ position: [0, -10, 10], fov: 70 }}>
             <Environment
               files="/kloppenheim_06_puresky_1k.hdr" // Путь к вашему HDRI
               background={true}
@@ -30,7 +30,7 @@ export default function App() {
               decay={0}
               distance={45}
               penumbra={1}
-              intensity={100}
+              intensity={10}
             />
             <spotLight
               position={[-20, 0, 10]}
@@ -38,7 +38,7 @@ export default function App() {
               angle={0.15}
               decay={0}
               penumbra={-1}
-              intensity={30}
+              intensity={10}
             />
             <spotLight
               position={[20, -10, 10]}
@@ -46,7 +46,7 @@ export default function App() {
               angle={0.2}
               decay={0}
               penumbra={-1}
-              intensity={20}
+              intensity={10}
             />
             <OrbitControls
               enableDamping={false}
@@ -142,46 +142,29 @@ function Sky() {
   return (
     <>
       <group ref={ref}>
-        <Clouds material={THREE.MeshLambertMaterial} limit={400}>
+        <Clouds material={THREE.MeshLambertMaterial} limit={10}>
           {/* <Cloud ref={cloud0} bounds={[2, 7, 9]} color={"red"} /> */}
           <Cloud
-            texture={"/cloud.png"}
-            bounds={[1, 3, 4]}
-            color="#eed0d0"
-            seed={1}
-            position={[15, 0, 0]}
-          />
+            args={[1, 32, 32]} // Простая сфера без текстуры
+            position={[0, 0, 0]}
+            scale={[10, 10, 10]}
+          >
+            <meshBasicMaterial color="red" transparent opacity={1} />
+          </Cloud>
           <Cloud
-            texture={"/cloud.png"}
-            bounds={[3, 5, 14]}
-            color="purple"
-            seed={1}
-            position={[-15, 0, 0]}
-          />
+            args={[1, 32, 32]} // Простая сфера без текстуры
+            position={[0, 0, 0]}
+            scale={[3, 1, 1]}
+          >
+            <meshBasicMaterial color="red" transparent opacity={1} />
+          </Cloud>
           <Cloud
-            texture={"/cloud.png"}
-            bounds={[5, 12, 3]}
-            color="#a0b0d0"
-            seed={1}
-            position={[0, 0, -12]}
-          />
-          <Cloud
-            texture={"/cloud.png"}
-            bounds={[2, 10, 17]}
-            color="purple"
-            seed={1}
-            position={[0, 0, 12]}
-          />
-          <Cloud
-            texture={"/cloud.png"}
-            concentrate="outside"
-            growth={100}
-            color="blue"
-            opacity={0.25}
-            seed={0.3}
-            bounds={200}
-            volume={200}
-          />
+            args={[1, 32, 32]} // Простая сфера без текстуры
+            position={[0, 0, 0]}
+            scale={[2, 2, 2]}
+          >
+            <meshBasicMaterial color="red" transparent opacity={1} />
+          </Cloud>
         </Clouds>
       </group>
     </>

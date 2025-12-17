@@ -5,7 +5,6 @@ import Development from "../components/worksFiles/Development";
 import WebDesign from "../components/worksFiles/WebDesign";
 import ChairPage from "../components/worksFiles/ChairPage";
 import Cloud from "../components/worksFiles/Cloud";
-import Rules from "../components/worksFiles/Rules";
 // import PrevCar from "./PrevCar";
 
 const Section = styled.div`
@@ -147,7 +146,7 @@ const Works = () => {
             ) : activeItem === "Разрез детали" ? (
               <Cloud />
             ) : activeItem === "Управление камерой" ? (
-              <Rules /> // убрал <Rules />
+              <Development /> 
             ) : activeItem === "Карточки товаров" ? (
               <Development />
             ) : null}

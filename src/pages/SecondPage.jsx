@@ -18,7 +18,7 @@ const SecondPage = () => {
 
   return (
     <div className="page">
-      <div className="component">
+      {/* <div className="component">
         <Header />
       </div>
 
@@ -34,7 +34,7 @@ const SecondPage = () => {
       </div>
       <div className="component">
         <Phone />
-      </div>
+      </div> */}
       
       <div className="component">
         <Superpower />

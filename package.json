@@ -5,6 +5,8 @@
   "dependencies": {
     "@react-three/drei": "^9.101.3",
     "@react-three/fiber": "^8.15.24",
+    "jotai": "^2.16.0",
+    "leva": "^0.10.1",
     "lil-gui": "^0.21.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

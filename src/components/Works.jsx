@@ -138,7 +138,7 @@ const Works = () => {
           </Left>
           <Right>
             {activeItem === "Wow-эффекты" ? (
-              <Development />
+              <WebDesign />
             ) : activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Движение" ? (

@@ -7,6 +7,7 @@ import { Environment, Loader } from "@react-three/drei";
 import { Center } from "@react-three/drei";
 import Pirates from "../worksFiles/Pirate";
 import { OrbitControls } from "@react-three/drei";
+import { AmbientLight, DirectionalLight } from "three";
 
 const ChairPage = () => {
   return (
@@ -15,10 +16,11 @@ const ChairPage = () => {
       <Canvas camera={{ position: [0, 2, 5] }}>
         <OrbitControls />
         <Suspense fallback={null}>
-          <Environment
-            preset="dawn"
-            background={false}
-           
+          <ambientLight intensity={2} />
+          <directionalLight
+            castShadow
+            position={[0, 1, 5]}
+            intensity={5}
           />
             <Pirates />
         

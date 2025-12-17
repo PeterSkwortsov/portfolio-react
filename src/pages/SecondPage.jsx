@@ -7,8 +7,8 @@ import Phone from "../components/Phone";
 import AboutMe from "../components/AboutMe";
 import Superpower from "../components/Superpower";
 import Works from "../components/Works";
-
-
+import ImageModal from '../components/worksFiles/ImageModal';
+import Footer from "../components/Footer";
 const SecondPage = () => {
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const SecondPage = () => {
 
   return (
     <div className="page">
-      {/* <div className="component">
+      <div className="component">
         <Header />
       </div>
 
@@ -34,18 +34,22 @@ const SecondPage = () => {
       </div>
       <div className="component">
         <Phone />
-      </div> */}
-      
+      </div>
+
       <div className="component">
         <Superpower />
       </div>
       <div className="component">
         <Works />
       </div>
+      <div className="component">
+        <ImageModal />
+      </div>
 
-      {/* <button onClick={handleBack} className="nav-button">
+        <Footer />
+      <button onClick={handleBack} className="nav-button">
         Вернуться на главную
-      </button> */}
+      </button>
     </div>
   );
 };

@@ -5,9 +5,7 @@ import { lerp } from "three/src/math/MathUtils";
 import { CameraControls } from "@react-three/drei";
 import { MeshReflectorMaterial } from "@react-three/drei";
 import { degToRad } from "three/src/math/MathUtils";
-import { Color } from "three";
-const bloomColor = new Color("#red");
-bloomColor.multiplyScalar(2);
+
 export const Experience = () => {
   const controls = useRef();
   const textRef = useRef();
@@ -77,7 +75,7 @@ export const Experience = () => {
         anchorY={"bottom"}
       >
         Cмотреть{"\n"}портфолио
-        <meshBasicMaterial color={bloomColor} toneMapped={false} />
+        <meshBasicMaterial color={'#fff'} toneMapped={false} />
       </Text>
       <mesh position-y={-1.7} rotation-x={-Math.PI / 2}>
         <ambientLight intensity={1} />

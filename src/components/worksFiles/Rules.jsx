@@ -121,42 +121,7 @@ export default function Rules({ title, content, icon = "ℹ️", distance = 5, .
         <Center>
           <Kitchen2 />
           <FloatingText distance={distance} {...props}>
-            <div
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(30,30,30,0.9) 50%)",
-                color: "white",
-                padding: "8px",
-                borderRadius: "12px",
-                border: "1px solid rgba(0, 255, 255, 0.3)",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
-                backdropFilter: "blur(10px)",
-                width: "150px",
-                transform: "translateZ(0)",
-                fontFamily: "system-ui, -apple-system, sans-serif",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "-8px",
-                }}
-              >
-               
-              </div>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "14px",
-                  lineHeight: "1.5",
-                  color: "#cccccc",
-                }}
-              >
-                Вы можете путешествоать по квартире 
-              </p>
-              
-            </div>
+            
           </FloatingText>
         </Center>
       </Canvas>

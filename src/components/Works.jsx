@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Development from "../components/worksFiles/Development";
-import WebDesign from "../components/worksFiles/WebDesign";
+// import WebDesign from "../components/worksFiles/WebDesign";
 import ChairPage from "../components/worksFiles/ChairPage";
 import Cloud from "../components/worksFiles/Cloud";
 // import PrevCar from "./PrevCar";
@@ -138,7 +138,7 @@ const Works = () => {
           </Left>
           <Right>
             {activeItem === "Wow-эффекты" ? (
-              <WebDesign />
+              <Development />
             ) : activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Движение" ? (

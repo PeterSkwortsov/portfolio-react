@@ -147,7 +147,7 @@ const Works = () => {
             ) : activeItem === "Разрез детали" ? (
               <Cloud />
             ) : activeItem === "Управление камерой" ? (
-              <Development /> // убрал <Rules />
+              <Rules /> // убрал <Rules />
             ) : activeItem === "Карточки товаров" ? (
               <Development />
             ) : null}

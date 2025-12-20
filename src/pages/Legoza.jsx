@@ -1,30 +1,43 @@
-import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Ships() {
   const [isVisible, setIsVisible] = useState(false);
-
-  const navigate = useNavigate();
-
-  const goToSecondPage = (blockId = "") => {
-    // Сохраняем ID блока, от которого переходим
-    navigate("/second/section-3", {
-      state: {
-        fromBlock: blockId, // Например 'section-3'
-        scrollTo: blockId,
-      },
-    });
-  };
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+
+ const navigate = useNavigate();
+ const location = useLocation();
+
+ // Получаем данные откуда пришли
+ const fromPage = location.state?.fromPage;
+ const scrollToBlock = location.state?.scrollToBlock;
+
+ const handleGoBack = () => {
+   if (fromPage && scrollToBlock) {
+     // Возвращаемся на предыдущую страницу
+     navigate(fromPage, {
+       state: {
+         shouldScrollToBlock: scrollToBlock,
+         scrollBehavior: "smooth",
+       },
+     });
+   } else {
+     // Если нет данных, просто назад
+     navigate(-1);
+   }
+ };
+
+
+  // Данные проекта (в реальном приложении можно брать из API)
   const projectData = {
-    title: "Творческая студия Вики Борщ",
-    description: "Мастерская живописи и гончарного мастерства",
-    imageUrl: "bor2.jpg",
+    title: "Сеть детских развлечений",
+    description: "Лендинг сети детских аттракционов в Нижнем Новгороде",
+    imageUrl: "/london.png",
     githubUrl: "https://github.com/username/ecommerce-platform",
     overview:
       "Мой первый сайт, который я создал сам через три месяца после того, как стал заниматься веб-разработкой. Полностью адаптирован под мобильные устройства.",
@@ -41,7 +54,7 @@ export default function Ships() {
     ],
     liveDemoUrl: "http://legozann.ru/",
     status: "Завершен",
-    duration: "2 месяца",
+    duration: "3 месяца",
   };
 
   const {
@@ -61,11 +74,11 @@ export default function Ships() {
   return (
     <>
       {/* Основной контент */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 bg-orange-600">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 bg-red-400">
         <div className="container mx-auto px-4 py-8 max-w-6xl">
           {/* Хедер проекта */}
           <button
-            onClick={() => goToSecondPage("section-3")}
+            onClick={handleGoBack}
             className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 mb-5"
           >
             <svg
@@ -93,12 +106,12 @@ export default function Ships() {
             </div>
 
             <h1
-              className={`mt-6 mb-4 transition-all duration-1000 delay-0 ${
+              className={`mt-6 mb-4 transition-all duration-1000 ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <span className="text-5xl md:text-5xl lg:text-7xl font-black">
-                <span className="bg-gradient-to-r via-orange-800   to-red-500 from-purple-400 bg-clip-text text-transparent animate-gradient bg-300%">
+                <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient bg-300%">
                   {title}
                 </span>
               </span>
@@ -111,11 +124,11 @@ export default function Ships() {
 
           {/* Карточка проекта */}
           <div
-            className="bg-white/80  rounded-3xl shadow-xl border
+            className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border
            border-white/60 overflow-hidden"
           >
             {/* Hero изображение */}
-            <div className="relative  w-full">
+            <div className="relative h-80 md:h-96 w-full">
               <img
                 src={imageUrl}
                 alt={title}
@@ -123,6 +136,7 @@ export default function Ships() {
                 className="object-cover"
                 priority
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
             {/* Контент */}
@@ -248,8 +262,34 @@ export default function Ships() {
                   </section>
                 </div>
               </div>
+
+              {/* Дополнительная информация */}
+              {/* <div className="mt-12 pt-8 border-t border-gray-200/60">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div className="bg-blue-50/50 rounded-2xl p-6">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">
+                      95+
+                    </div>
+                    <div className="text-gray-600">PageSpeed Score</div>
+                  </div>
+                  <div className="bg-green-50/50 rounded-2xl p-6">
+                    <div className="text-2xl font-bold text-green-600 mb-2">
+                      35%
+                    </div>
+                    <div className="text-gray-600">Рост конверсии</div>
+                  </div>
+                  <div className="bg-purple-50/50 rounded-2xl p-6">
+                    <div className="text-2xl font-bold text-purple-600 mb-2">
+                      10K+
+                    </div>
+                    <div className="text-gray-600">Пользователей</div>
+                  </div>
+                </div>
+              </div> */}
             </div>
           </div>
+
+          {/* Футер */}
         </div>
       </div>
     </>

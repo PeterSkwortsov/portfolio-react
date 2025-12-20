@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const Grid = () => {
   const navigate = useNavigate();
+
+
+
   return (
     <>
       <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
@@ -22,14 +25,20 @@ const Grid = () => {
               </h2>
               <p>На React. Адаптивная верстка. Свой дизайн.</p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl mt-4">
-                  <Link href="./gallery">Подробнее</Link>
+                <button
+                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  onClick={() => navigate("/gallery")}
+                >
+                  Подробнее
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div
+          className="card bg-base-200 img-full w-auto shadow-sm"
+          id="special-block"
+        >
           <img
             src="/leg2.jpg"
             width={200}
@@ -40,7 +49,7 @@ const Grid = () => {
 
           <div className="card-body">
             <div className="card-actions justify-center items-center z-20 ">
-              <h2 className="card-title mt-2 text-white" id="2">
+              <h2 className="card-title mt-2 text-white">
                 Сеть детских аттракционов в Нижнем Новгороде
               </h2>
               <p>
@@ -48,8 +57,11 @@ const Grid = () => {
                 анимация.
               </p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl mt-4">
-                  <Link href="./gallery">Подробнее</Link>
+                <button
+                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  onClick={() => navigate("/legoza")}
+                >
+                  Подробнее
                 </button>
               </div>
             </div>
@@ -72,7 +84,6 @@ const Grid = () => {
               </h2>
               <p>Адаптив. Кастомный прелоадер. Дизайн, анимация и графика.</p>
               <div className="card-actions justify-end items-center z-20">
-                
                 <button
                   className="btn btn-neutral bg-white text-black rounded-xl mt-4"
                   onClick={() => navigate("/familyPages")}
@@ -93,7 +104,7 @@ const Grid = () => {
           />
           <div className="card-body">
             <div className="card-actions justify-center items-center z-20 ">
-              <h2 className="card-title mt-2 text-white" id="3">
+              <h2 className="card-title mt-2 text-white" id="section-3">
                 Творческая студия «Вики Борщ»
               </h2>
               <p>Next.js, адаптив, многостраничный, дизайн.</p>

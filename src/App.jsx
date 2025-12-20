@@ -7,7 +7,8 @@ import HomePage from './pages/HomePage';
 import SecondPage from './pages/SecondPage';  
 import BorschStudia from "./pages/BorschStudia";
 import Family from "./pages/Family-project";
-
+import Gallery from "./pages/Gallery";
+import Thirrd from "./pages/Legoza";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,8 @@ function App() {
         <Route path="/second" element={<SecondPage />} />
         <Route path="/borschstudia" element={<BorschStudia />} />
         <Route path="/familyPages" element={<Family />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/legoza" element={<Thirrd />} />
       </Routes>
     </BrowserRouter>
   );

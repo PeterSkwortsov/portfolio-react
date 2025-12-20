@@ -82,7 +82,7 @@ export default function AboutMe() {
           {/* Правая колонка - Детальная информация */}
           <div className="space-y-6 ">
             {/* Табы */}
-            <div className="tabs tabs-boxed bg-base-200 p-1 rounded-2xl">
+            <div className="tabs tabs-boxed bg-stone-900 p-1 rounded-2xl">
               <button
                 className={`tab tab-lg flex-1 text-sm font-bold ${
                   activeTab === "about" ? "tab-active" : ""
@@ -110,10 +110,10 @@ export default function AboutMe() {
             </div>
 
             {/* Контент табов */}
-            <div className="bg-base-200 rounded-2xl p-6">
+            <div className="bg-stone-900 rounded-2xl p-6">
               {activeTab === "about" && (
                 <div className="space-y-4">
-                  <p className="text-md leading-relaxed font-sans text-white">
+                  <p className="text-md text-white">
                     Мне хочется удивлять людей, создавать вещи, которые вызывают
                     эмоции. Именно поэтому я стал углубляться в возможности
                     Three.js и объемной графики.

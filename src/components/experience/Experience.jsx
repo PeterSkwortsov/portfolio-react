@@ -81,7 +81,7 @@ export const Experience = () => {
         <ambientLight intensity={1} />
         <planeGeometry args={[100, 100]} />
         <MeshReflectorMaterial
-          blur={[50, 50]}
+          blur={[250, 250]}
           resolution={1024}
           mixBlur={1}
           mixStrength={10}
@@ -92,7 +92,7 @@ export const Experience = () => {
           minDepthThreshold={0.4}
           maxDepthThreshold={1.4}
           color="#333"
-          metalness={0.5}
+          metalness={0.3}
         />
       </mesh>
     </>

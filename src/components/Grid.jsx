@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const Grid = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
@@ -69,8 +72,12 @@ const Grid = () => {
               </h2>
               <p>Адаптив. Кастомный прелоадер. Дизайн, анимация и графика.</p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl mt-4">
-                  <Link href="./gallery">Подробнее</Link>
+                
+                <button
+                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  onClick={() => navigate("/familyPages")}
+                >
+                  Подробнее
                 </button>
               </div>
             </div>
@@ -85,10 +92,33 @@ const Grid = () => {
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
-            <h2 className="card-title text-white" id="4">
-              Творческая студия «Вики Борщ»
+            <div className="card-actions justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="3">
+                Творческая студия «Вики Борщ»
+              </h2>
+              <p>Next.js, адаптив, многостраничный, дизайн.</p>
+              <div className="card-actions justify-end items-center z-20">
+                <button className="btn btn-neutral bg-white text-black rounded-xl mt-4">
+                  <Link to="/borschstudia">Подробнее</Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card bg-base-200 img-full w-auto shadow-sm">
+          <img
+            src="/time.png"
+            width={200}
+            height={200}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <div className="card-body">
+            <h2 className="card-title text-white" id="5">
+              Лендинг часов
             </h2>
-            <p>Next.js, адаптив, многостраничный, дизайн.</p>
+            <p>Three.js, GSAP</p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
                 <Link href={"./borschArt"}>
@@ -96,28 +126,6 @@ const Grid = () => {
                     Подробнее
                   </button>
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
-          <img
-            src="/time.png"
-            width={200}
-            height={200}
-            alt="Picture of the author"
-            style={{ width: "100%", height: "100%" }}
-          />
-          <div className="card-body">
-            <h2 className="card-title" id="4">
-              Лендинг часов
-            </h2>
-            <p>Three.js, GSAP</p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl">
-                  Подробнее
-                </button>
               </div>
             </div>
           </div>

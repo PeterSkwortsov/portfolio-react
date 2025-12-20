@@ -11,26 +11,26 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex gap-2 justify-center mt-2">
           <div className="avatar">
-            <div className="w-10 bg-blue-300 rounded-lg">
-              <a href="https://vk.com/vika.borsch">
+            <div className="w-10">
+              <a href="https://vk.com/skwortsow.petia">
                 <img
-                  src="/vk2.svg"
+                  src="/vk.svg"
                   width={200}
                   height={100}
-                  alt="Picture of the author"
+                  alt="Профиль в вконтакте"
                   style={{ width: "100%" }}
                 />
               </a>
             </div>
           </div>
-          <div className="avatar avatar-online">
+          <div className="">
             <div className="w-10">
-              <a href="https://t.me/vika_borsch99">
+              <a href="https://t.me/Petr_Skworcov">
                 <img
                   src="/tg2.svg"
                   width={200}
                   height={100}
-                  alt="Picture of the author"
+                  alt="Профиль в телеграмме"
                   style={{ width: "100%" }}
                 />
               </a>

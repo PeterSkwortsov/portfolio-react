@@ -184,7 +184,7 @@ const handleGoBack = () => {
                           Обзор проекта
                         </h2>
                       </div>
-                      <p className="text-gray-700 leading-relaxed text-lg">
+                      <p className="text-gray-700 leading-relaxed text-md">
                         {overview}
                       </p>
                     </section>

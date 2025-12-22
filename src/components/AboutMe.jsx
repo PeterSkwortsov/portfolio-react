@@ -80,11 +80,11 @@ export default function AboutMe() {
           </div>
 
           {/* Правая колонка - Детальная информация */}
-          <div className="space-y-6 ">
+          <div className="space-y-6">
             {/* Табы */}
             <div className="tabs tabs-boxed bg-stone-900 p-1 rounded-2xl">
               <button
-                className={`tab tab-lg flex-1 text-sm font-bold ${
+                className={`tab tab-lg flex-1 text-sm text-white font-bold ${
                   activeTab === "about" ? "tab-active" : ""
                 }`}
                 onClick={() => setActiveTab("about")}
@@ -92,7 +92,7 @@ export default function AboutMe() {
                 О себе
               </button>
               <button
-                className={`tab tab-lg flex-1 text-sm font-bold ${
+                className={`tab tab-lg flex-1 text-sm text-white font-bold ${
                   activeTab === "skills" ? "tab-active" : ""
                 }`}
                 onClick={() => setActiveTab("skills")}
@@ -100,7 +100,7 @@ export default function AboutMe() {
                 Навыки
               </button>
               <button
-                className={`tab tab-lg flex-1 text-sm font-bold ${
+                className={`tab tab-lg flex-1 text-sm text-white font-bold ${
                   activeTab === "contact" ? "tab-active " : ""
                 }`}
                 onClick={() => setActiveTab("contact")}

@@ -1,48 +1,58 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Ships() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const navigate = useNavigate();
+const navigate = useNavigate();
+const location = useLocation();
 
-  const goToSecondPage = (blockId = "") => {
-    // Сохраняем ID блока, от которого переходим
-    navigate("/second/section-3", {
+// Получаем данные откуда пришли
+const fromPage = location.state?.fromPage;
+const scrollToBlock = location.state?.scrollToBlock;
+
+const handleGoBack = () => {
+  if (fromPage && scrollToBlock) {
+    // Возвращаемся на предыдущую страницу
+    navigate(fromPage, {
       state: {
-        fromBlock: blockId, // Например 'section-3'
-        scrollTo: blockId,
+        shouldScrollToBlock: scrollToBlock,
+        scrollBehavior: "smooth",
       },
     });
-  };
+  } else {
+    // Если нет данных, просто назад
+    navigate(-1);
+  }
+};
+
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const projectData = {
-    title: "Творческая студия Вики Борщ",
-    description: "Мастерская живописи и гончарного мастерства",
-    imageUrl: "bor2.jpg",
-    githubUrl: "https://github.com/username/ecommerce-platform",
-    overview:
-      "Мой первый сайт, который я создал сам через три месяца после того, как стал заниматься веб-разработкой. Полностью адаптирован под мобильные устройства.",
-    goals: [
-      "C полного нуля, без дизайна, без контента, без концепции. Мне сказали: сделай мне простой лендинг, чтобы было понятно, что он про детей.",
-    ],
+   const projectData = {
+     title: "Творческая студия Вики Борщ",
+     description: "Мастерская живописи и гончарного мастерства",
+     imageUrl: "/bor2.jpg",
+     githubUrl: "https://github.com/username/ecommerce-platform",
+     overview:
+       "Главной целью было обеспечить быструю загрузку изображений, так как ожидалось множество фотографий. Нужно было отразить атмосферу творческой мастерской, используя оранжевый и красный цвета. Также требовалось включить всю необходимую информацию для SEO-продвижения. Необходимо было создать удобный и интуитивно понятный слайдер и таблицы с ценами, чтобы все было понятно и наглядно.",
 
-    technologies: ["Bootstrap", "AOS", "FancyBox", "jQuery"],
-    results: [
-      "Соответствие страницы основным рекомендациям поисковой оптимизации - 90/100 баллов",
-      "Total Blocking Time - 0 мс",
-      "Cumulative Layout Shift - 0,067",
-      "First Contentful Paint - 1.3 мс",
-    ],
-    liveDemoUrl: "http://legozann.ru/",
-    status: "Завершен",
-    duration: "2 месяца",
-  };
+     technologies: ["Next.js", "Tailwind", "Daisy UI"],
+     results: [
+       "Соответствие страницы основным рекомендациям поисковой оптимизации - 98/100 баллов",
+       "Largest Contentful Paint - 1,1 сек.",
+       "Total Blocking Time - 60 мс",
+       "Cumulative Layout Shift - 0",
+       "First Contentful Paint - 0.5 мс",
+     ],
+     liveDemoUrl: "https://borsch-art.ru/",
+     status: "Завершен",
+     duration: "1.5 месяца",
+   };
 
   const {
     title,
@@ -65,7 +75,7 @@ export default function Ships() {
         <div className="container mx-auto px-4 py-8 max-w-6xl">
           {/* Хедер проекта */}
           <button
-            onClick={() => goToSecondPage("section-3")}
+            onClick={handleGoBack}
             className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 mb-5"
           >
             <svg
@@ -169,40 +179,13 @@ export default function Ships() {
                         Обзор проекта
                       </h2>
                     </div>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-md">
                       {overview}
                     </p>
                   </section>
 
                   {/* Цели проекта */}
-                  <section>
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-2 h-8 bg-green-600 rounded-full"></div>
-                      <h2 className="text-2xl font-bold text-gray-900">
-                        Цели проекта
-                      </h2>
-                    </div>
-                    <ul className="space-y-4">
-                      {goals.map((goal, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                            <svg
-                              className="w-3 h-3 text-green-600"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                          <span className="text-gray-700">{goal}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
+                  <section></section>
                 </div>
 
                 {/* Правая колонка */}

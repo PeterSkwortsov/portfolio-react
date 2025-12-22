@@ -9,8 +9,8 @@ const Grid = () => {
 
   return (
     <>
-      <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20">
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+      <div className="grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:px-20 mb-20 ">
+        <div className="card img-full w-auto  bg-slate-900">
           <img
             src="/gal2.jpg"
             width={100}
@@ -23,10 +23,12 @@ const Grid = () => {
               <h2 className="card-title text-white mt-2" id="1">
                 Каталог картин художников
               </h2>
-              <p>На React. Адаптивная верстка. Свой дизайн.</p>
+              <p className="text-white">
+                На React. Адаптивная верстка. Свой дизайн.
+              </p>
               <div className="card-actions justify-end items-center z-20">
                 <button
-                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  className="btn btn-primary bg-white text-black rounded-xl mt-4"
                   onClick={() => navigate("/gallery")}
                 >
                   Подробнее
@@ -35,10 +37,7 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div
-          className="card bg-base-200 img-full w-auto shadow-sm"
-          id="special-block"
-        >
+        <div className="card img-full w-auto bg-slate-900" id="special-block">
           <img
             src="/leg2.jpg"
             width={200}
@@ -52,13 +51,13 @@ const Grid = () => {
               <h2 className="card-title mt-2 text-white">
                 Сеть детских аттракционов в Нижнем Новгороде
               </h2>
-              <p>
+              <p className="text-white">
                 Мой самый первый коммерческий проект, 2022 год. Адаптив,
                 анимация.
               </p>
               <div className="card-actions justify-end items-center z-20">
                 <button
-                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  className="btn btn-primary bg-white text-black rounded-xl mt-4"
                   onClick={() => navigate("/legoza")}
                 >
                   Подробнее
@@ -68,7 +67,7 @@ const Grid = () => {
           </div>
         </div>
         {/* game-attractions */}
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card bg-slate-900 img-full w-auto ">
           <img
             src="/family.png"
             width={200}
@@ -82,10 +81,12 @@ const Grid = () => {
               <h2 className="card-title mt-2 text-white" id="3">
                 Сайт проекта «История семьи»
               </h2>
-              <p>Адаптив. Кастомный прелоадер. Дизайн, анимация и графика.</p>
+              <p className="text-white">
+                Адаптив. Кастомный прелоадер. Дизайн, анимация и графика.
+              </p>
               <div className="card-actions justify-end items-center z-20">
                 <button
-                  className="btn btn-neutral bg-white text-black rounded-xl mt-4"
+                  className="btn btn-primary bg-white text-black rounded-xl mt-4"
                   onClick={() => navigate("/familyPages")}
                 >
                   Подробнее
@@ -94,7 +95,7 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/bor2.jpg"
             width={200}
@@ -107,9 +108,11 @@ const Grid = () => {
               <h2 className="card-title mt-2 text-white" id="section-3">
                 Творческая студия «Вики Борщ»
               </h2>
-              <p>Next.js, адаптив, многостраничный, дизайн.</p>
+              <p className="text-white">
+                Next.js, адаптив, многостраничный, дизайн.
+              </p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl mt-4">
+                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
                   <Link to="/borschstudia">Подробнее</Link>
                 </button>
               </div>
@@ -117,7 +120,7 @@ const Grid = () => {
           </div>
         </div>
 
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card img-full w-auto bg-slate-900">
           <img
             src="/time.png"
             width={200}
@@ -129,11 +132,11 @@ const Grid = () => {
             <h2 className="card-title text-white" id="5">
               Лендинг часов
             </h2>
-            <p>Three.js, GSAP</p>
+            <p className="text-white">Three.js, GSAP</p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
                 <Link href={"./borschArt"}>
-                  <button className="btn btn-neutral bg-white text-black rounded-xl">
+                  <button className="btn btn-primary bg-white text-black rounded-xl">
                     Подробнее
                   </button>
                 </Link>
@@ -141,7 +144,7 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card img-full w-auto bg-slate-900">
           <img
             src="/game.png"
             width={200}
@@ -153,17 +156,17 @@ const Grid = () => {
             <h2 className="card-title" id="5">
               Игра в мяч
             </h2>
-            <p>R3F, Drei</p>
+            <p className="text-white">R3F, Drei</p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl">
+                <button className="btn btn-primary bg-white text-black rounded-xl">
                   Подробнее
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card img-full w-auto bg-slate-900">
           <img
             src="/ball.png"
             width={200}
@@ -175,17 +178,17 @@ const Grid = () => {
             <h2 className="card-title" id="6">
               Техника раскадровки кадров
             </h2>
-            <p>Blender, GSAP </p>
+            <p className="text-white">Blender, GSAP </p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-neutral bg-white text-black rounded-xl">
+                <button className="btn btn-primary bg-white text-black rounded-xl">
                   Подробнее
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/stadium.png"
             width={200}
@@ -197,11 +200,11 @@ const Grid = () => {
             <h2 className="card-title" id="7">
               Интерактивное бронирование билетов
             </h2>
-            <p>GSAP</p>
+            <p className="text-white">GSAP</p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
                 <Link href={"./stadium"}>
-                  <button className="btn btn-neutral bg-white text-black rounded-xl">
+                  <button className="btn btn-primary bg-white text-black rounded-xl">
                     Подробнее
                   </button>
                 </Link>
@@ -209,7 +212,7 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 img-full w-auto shadow-sm">
+        <div className="card img-full w-auto bg-slate-900">
           <img
             src="/cubes.jpg"
             width={200}
@@ -221,11 +224,11 @@ const Grid = () => {
             <h2 className="card-title" id="7">
               Интерактивный переход между страницами
             </h2>
-            <p>GSAP</p>
+            <p className="text-white">GSAP</p>
             <div className="card-actions justify-between items-start z-20 ">
               <div className="card-actions justify-end items-center z-20">
                 <Link href={"./discovery"}>
-                  <button className="btn btn-neutral bg-white text-black rounded-xl">
+                  <button className="btn btn-primary bg-white text-black rounded-xl">
                     Подробнее
                   </button>
                 </Link>

@@ -128,7 +128,7 @@ export default function Ships() {
            border-white/60 overflow-hidden"
           >
             {/* Hero изображение */}
-            <div className="relative h-80 md:h-96 w-full">
+            <div className="relative  w-full">
               <img
                 src={imageUrl}
                 alt={title}
@@ -183,7 +183,7 @@ export default function Ships() {
                         Обзор проекта
                       </h2>
                     </div>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-md">
                       {overview}
                     </p>
                   </section>

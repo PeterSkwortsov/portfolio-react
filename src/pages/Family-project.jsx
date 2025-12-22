@@ -17,7 +17,7 @@ const handleBack = () => {
   {
     // Данные проекта (в реальном приложении можно брать из API)
     const projectData = {
-      title: "Проект «История семьи»",
+      title: "«История семьи»",
       description:
         "Сохранение памяти о своих родителях, бабушек и дедушек через интервью. Полноценный фильм о своей семье.",
       imageUrl: "/history.png",
@@ -87,7 +87,7 @@ const handleBack = () => {
                   isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
                 }`}
               >
-                <span className="text-5xl md:text-5xl lg:text-7xl font-black">
+                <span className=" text-5xl md:text-5xl lg:text-7xl font-black">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient bg-300%">
                     {title}
                   </span>
@@ -110,7 +110,6 @@ const handleBack = () => {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
               {/* Контент */}
@@ -157,7 +156,7 @@ const handleBack = () => {
                           Обзор проекта
                         </h2>
                       </div>
-                      <p className="text-gray-700 leading-relaxed text-lg">
+                      <p className="text-gray-700 leading-relaxed text-md">
                         {overview}
                       </p>
                     </section>

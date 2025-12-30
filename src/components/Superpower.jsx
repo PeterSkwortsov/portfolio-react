@@ -41,10 +41,7 @@ export default function SuperpowerInteractive() {
             </div>
 
             <h1 className="text-3xl md:text-3xl font-bold text-white mb-4">
-              У меня есть{" "}
-              <span className="bg-gradient-to-r from-purple-100 to-purple-800 bg-clip-text text-transparent">
-                сверхспособность
-              </span>
+              У меня есть сверхспособность
             </h1>
 
             <p className="text-xl md:text-1xl text-gray-300 mb-8 p-3 leading-relaxed">
@@ -57,7 +54,7 @@ export default function SuperpowerInteractive() {
               <div className="hero-content text-center">
                 <div className="max-w-2xl">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    Это - <span className="text-yellow-400">делегирование</span>
+                    Это - <span className="text-orange-200">делегирование</span>
                   </h2>
                   <p className="text-lg text-gray-300 mb-6">
                     Искусство находить правильных людей для нужных задач

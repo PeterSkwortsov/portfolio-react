@@ -19,7 +19,7 @@ const Grid = () => {
             style={{ width: "100%" }}
           />
           <div className="card-body">
-            <div className="card-actions justify-center items-center z-20 ">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
               <h2 className="card-title text-white mt-2" id="1">
                 Каталог картин художников
               </h2>
@@ -47,7 +47,7 @@ const Grid = () => {
           />
 
           <div className="card-body">
-            <div className="card-actions justify-center items-center z-20 ">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
               <h2 className="card-title mt-2 text-white">
                 Сеть детских аттракционов в Нижнем Новгороде
               </h2>
@@ -77,7 +77,7 @@ const Grid = () => {
           />
 
           <div className="card-body">
-            <div className="card-actions justify-center items-center z-20 ">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
               <h2 className="card-title mt-2 text-white" id="3">
                 Сайт проекта «История семьи»
               </h2>
@@ -104,7 +104,7 @@ const Grid = () => {
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
-            <div className="card-actions justify-center items-center z-20 ">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
               <h2 className="card-title mt-2 text-white" id="section-3">
                 Творческая студия «Вики Борщ»
               </h2>
@@ -119,27 +119,47 @@ const Grid = () => {
             </div>
           </div>
         </div>
-
-        <div className="card img-full w-auto bg-slate-900">
+        <div className="card bg-slate-900 img-full w-auto">
           <img
-            src="/time.png"
+            src="/fire.jpg"
             width={200}
             height={200}
             alt="Сайт творческой студии Вики Борщ"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
-            <h2 className="card-title text-white" id="5">
-              Лендинг часов
-            </h2>
-            <p className="text-white">Three.js, GSAP</p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <Link href={"./borschArt"}>
-                  <button className="btn btn-primary bg-white text-black rounded-xl">
-                    Подробнее
-                  </button>
-                </Link>
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Промо-сайт песни «Огненная девочка»
+              </h2>
+              <p className="text-white">HTML, CSS, JS, анимация огня</p>
+              <div className="card-actions  justify-end items-center z-20">
+                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                  <Link to="/fireyGirl">Подробнее</Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card bg-slate-900 img-full w-auto">
+          <img
+            src="/watch.jpg"
+            width={200}
+            height={200}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <div className="card-body">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Демонстарция часов
+              </h2>
+              <p className="text-white">React, GSAP, R3F</p>
+              <div className="card-actions  justify-end items-center z-20">
+                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                  <Link to="/time-watch">Подробнее</Link>
+                </button>
               </div>
             </div>
           </div>

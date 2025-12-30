@@ -10,6 +10,8 @@ import BorschStudia from "./pages/BorschStudia";
 import Family from "./pages/Family-project";
 import Gallery from "./pages/Gallery";
 import Thirrd from "./pages/Legoza";
+import FieryGirl from "./pages/FieryGirl";
+import TimeWatch from "./pages/TimeWatch";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,15 +29,7 @@ function App() {
 
   return (
     <Suspense
-      fallback={
-        <div className="fixed inset-0 grid place-items-center bg-black text-white">
-          <div className="text-center">
-            <div className="w-16 h-16 border-4 border-purple-300 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-xl font-light">Загружаем портфолио...</p>
-          </div>
-        </div>
-      }
-    >
+      fallback={null}>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
@@ -45,6 +39,8 @@ function App() {
           <Route path="/familyPages" element={<Family />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/legoza" element={<Thirrd />} />
+          <Route path="/fireyGirl" element={<FieryGirl />} />
+          <Route path="/time-watch" element={<TimeWatch />} />
         </Routes>
       </BrowserRouter>
     </Suspense>

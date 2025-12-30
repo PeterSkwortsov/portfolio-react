@@ -38,7 +38,7 @@ export const Scene = ({ mainColor, path, ...props }) => {
           enableZoom={false}
         />
         <primitive object={scene} scale={ratioScale} />
-        <ambientLight intensity={0.5} color="pink" />
+        <ambientLight intensity={0.5} color="red" />
         <directionalLight position={[0, 0, 4]} intensity={3} />
         {/* Тени */}
         <AccumulativeShadows
@@ -46,10 +46,10 @@ export const Scene = ({ mainColor, path, ...props }) => {
           alphaTest={0.9}
           scale={30}
           position={[0, -0.005, 0]}
-          color="pink"
-          opacity={0.8}
+          color="red"
+          opacity={0.5}
         >
-          <RandomizedLight
+          {/* <RandomizedLight
             amount={4}
             radius={9}
             intensity={0.8}
@@ -62,7 +62,7 @@ export const Scene = ({ mainColor, path, ...props }) => {
             intensity={0.5}
             position={[-5, 5, 15]}
             bias={0.001}
-          />
+          /> */}
         </AccumulativeShadows>
 
         {/* <Lightformer
@@ -74,14 +74,14 @@ export const Scene = ({ mainColor, path, ...props }) => {
             target={[0, 0, 0]}
           /> */}
 
-        <Lightformer
+        {/* <Lightformer
           position={[-5, 0, 1]}
           form="circle" // circle | ring | rect (optional, default = rect)
           intensity={1} // power level (optional = 1)
           color="green" // (optional = white)
           scale={[2, 5]} // Scale it any way you prefer (optional = [1, 1])
           target={[0, 0, 0]}
-        />
+        /> */}
 
         {/* <Lightformer
             position={[0, 5, -2]}

@@ -112,9 +112,11 @@ const Grid = () => {
                 Next.js, адаптив, многостраничный, дизайн.
               </p>
               <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                  <Link to="/borschstudia">Подробнее</Link>
-                </button>
+                <Link to="/borschstudia">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    <Link to="/borschstudia">Подробнее</Link>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -134,9 +136,11 @@ const Grid = () => {
               </h2>
               <p className="text-white">HTML, CSS, JS, анимация огня</p>
               <div className="card-actions  justify-end items-center z-20">
-                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                  <Link to="/fireyGirl">Подробнее</Link>
-                </button>
+                <Link to="/fireyGirl">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    <Link to="/fireyGirl">Подробнее</Link>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -157,74 +161,33 @@ const Grid = () => {
               </h2>
               <p className="text-white">React, GSAP, R3F</p>
               <div className="card-actions  justify-end items-center z-20">
-                <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                  <Link to="/time-watch">Подробнее</Link>
-                </button>
+                <Link to="/time-watch">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    <Link to="/time-watch">Подробнее</Link>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="card img-full w-auto bg-slate-900">
+
+        <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/game.png"
             width={200}
             height={200}
-            alt="Picture of the author"
-            style={{ width: "200%" }}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
-            <h2 className="card-title" id="5">
-              Игра в мяч
-            </h2>
-            <p className="text-white">R3F, Drei</p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-primary bg-white text-black rounded-xl">
-                  Подробнее
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card img-full w-auto bg-slate-900">
-          <img
-            src="/ball.png"
-            width={200}
-            height={200}
-            alt="Picture of the author"
-            style={{ width: "200%" }}
-          />
-          <div className="card-body">
-            <h2 className="card-title" id="6">
-              Техника раскадровки кадров
-            </h2>
-            <p className="text-white">Blender, GSAP </p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <button className="btn btn-primary bg-white text-black rounded-xl">
-                  Подробнее
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card bg-slate-900 img-full w-auto">
-          <img
-            src="/stadium.png"
-            width={200}
-            height={200}
-            alt="Picture of the author"
-            style={{ width: "200%" }}
-          />
-          <div className="card-body">
-            <h2 className="card-title" id="7">
-              Интерактивное бронирование билетов
-            </h2>
-            <p className="text-white">GSAP</p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <Link href={"./stadium"}>
-                  <button className="btn btn-primary bg-white text-black rounded-xl">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Игра в мяч
+              </h2>
+              <p className="text-white">R3F, Drei</p>
+              <div className="card-actions  justify-end items-center z-20">
+                <Link to="/game">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
                     Подробнее
                   </button>
                 </Link>
@@ -232,24 +195,76 @@ const Grid = () => {
             </div>
           </div>
         </div>
-        <div className="card img-full w-auto bg-slate-900">
+        <div className="card bg-slate-900 img-full w-auto">
+          <img
+            src="/stadium.png"
+            width={100}
+            height={100}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "80%", backgroundSize: "contain" }}
+          />
+          <div className="card-body">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Наглядное бронирование билетов
+              </h2>
+              <p className="text-white">
+                SVG, Inkscape, JavaScript, leader - line
+              </p>
+              <div className="card-actions  justify-end items-center z-20">
+                <Link to="/stadium">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    <Link to="/stadium">Подробнее</Link>
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card bg-slate-900 img-full w-auto">
+          <img
+            src="/ball2.png"
+            width={200}
+            height={200}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <div className="card-body">
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Анимация через изображения
+              </h2>
+              <p className="text-white">
+                SVG, Inkscape, JavaScript, leader - line
+              </p>
+              <div className="card-actions  justify-end items-center z-20">
+                  <Link to="/ball">
+                    <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                      <Link to="/ball">Подробнее</Link>
+                    </button>
+                  </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/cubes.jpg"
             width={200}
             height={200}
-            alt="Picture of the author"
-            style={{ width: "200%" }}
+            alt="Сайт творческой студии Вики Борщ"
+            style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
-            <h2 className="card-title" id="7">
-              Интерактивный переход между страницами
-            </h2>
-            <p className="text-white">GSAP</p>
-            <div className="card-actions justify-between items-start z-20 ">
-              <div className="card-actions justify-end items-center z-20">
-                <Link href={"./discovery"}>
-                  <button className="btn btn-primary bg-white text-black rounded-xl">
-                    Подробнее
+            <div className="card-actions flex-col justify-center items-center z-20 ">
+              <h2 className="card-title mt-2 text-white" id="section-3">
+                Интерактивный переход между страницами
+              </h2>
+              <p className="text-white">React, R3F</p>
+              <div className="card-actions  justify-end items-center z-20">
+                <Link to="/discovery">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    <Link to="/discovery">Подробнее</Link>
                   </button>
                 </Link>
               </div>

@@ -1,9 +1,6 @@
 
 import {
   CameraControls,
-  Dodecahedron,
-  Grid,
-  MeshDistortMaterial,
   RenderTexture,
 } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
@@ -136,8 +133,7 @@ export default function Experiences() {
   });
   return (
     <group>
-      {/* <ambientLight intensity={0.2} />
-      <directionalLight position={[0, 0, 5]} intensity={2} /> */}
+    
       <CameraHandler slideDistance={slideDistance} />
       {/* MAIN WORLD */}
 

@@ -163,10 +163,37 @@ export default function AboutMe() {
                 <div className="space-y-4">
                   <div className="flex items-center text-white justify-center gap-4 p-3 bg-base-100 rounded-lg">
                     <div>
-                      <p className="font-semibold">Email</p>
-                      <p className="text-base-content/80">
+                      <p className="text-white font-semibold">
                         skwortsow.petia@yandex.ru
                       </p>
+                      <div className="flex gap-2 justify-center mt-2">
+                        <div className="avatar">
+                          <div className="w-10">
+                            <a href="https://vk.com/skwortsow.petia">
+                              <img
+                                src="/vk.svg"
+                                width={200}
+                                height={100}
+                                alt="Профиль в вконтакте"
+                                style={{ width: "100%" }}
+                              />
+                            </a>
+                          </div>
+                        </div>
+                        <div className="">
+                          <div className="w-10">
+                            <a href="https://t.me/Petr_Skworcov">
+                              <img
+                                src="/tg2.svg"
+                                width={200}
+                                height={100}
+                                alt="Профиль в телеграмме"
+                                style={{ width: "100%" }}
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 

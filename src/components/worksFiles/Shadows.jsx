@@ -27,7 +27,7 @@ export const Scene = ({ mainColor, path, ...props }) => {
     <>
       <color attach="background" args={["#ffffff"]} />
       <group {...props} dispose={null}>
-        <PerspectiveCamera makeDefault position={[3, 3, 8]} near={0.5} />
+        <PerspectiveCamera makeDefault position={[3, 3, 1]} near={0.5} />
         <OrbitControls
           autoRotate
           enablePan={false}
@@ -38,31 +38,31 @@ export const Scene = ({ mainColor, path, ...props }) => {
           enableZoom={false}
         />
         <primitive object={scene} scale={ratioScale} />
-        <ambientLight intensity={0.5} color="red" />
-        <directionalLight position={[0, 0, 4]} intensity={3} />
+        <ambientLight intensity={1} color="white" />
+        <directionalLight position={[0, 0, 4]} intensity={4} />
         {/* Тени */}
         <AccumulativeShadows
           frames={100}
           alphaTest={0.9}
           scale={30}
           position={[0, -0.005, 0]}
-          color="red"
-          opacity={0.5}
+          color="black"
+          opacity={1}
         >
           {/* <RandomizedLight
             amount={4}
             radius={9}
-            intensity={0.8}
+            intensity={2}
             ambient={0.25}
             position={[10, 5, 15]}
-          />
+          /> */}
           <RandomizedLight
             amount={4}
             radius={5}
-            intensity={0.5}
+            intensity={2.5}
             position={[-5, 5, 15]}
             bias={0.001}
-          /> */}
+          />
         </AccumulativeShadows>
 
         {/* <Lightformer

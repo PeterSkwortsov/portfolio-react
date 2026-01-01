@@ -126,9 +126,8 @@ const handleGoBack = () => {
               <img
                 src={imageUrl}
                 alt={title}
-                fill
+                fill="true"
                 className="object-cover"
-                priority
               />
             </div>
 

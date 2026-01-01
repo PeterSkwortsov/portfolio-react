@@ -114,7 +114,7 @@ const Grid = () => {
               <div className="card-actions justify-end items-center z-20">
                 <Link to="/borschstudia">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                    <Link to="/borschstudia">Подробнее</Link>
+                   Подробнее
                   </button>
                 </Link>
               </div>
@@ -138,7 +138,7 @@ const Grid = () => {
               <div className="card-actions  justify-end items-center z-20">
                 <Link to="/fireyGirl">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                    <Link to="/fireyGirl">Подробнее</Link>
+                    Подробнее
                   </button>
                 </Link>
               </div>
@@ -163,7 +163,7 @@ const Grid = () => {
               <div className="card-actions  justify-end items-center z-20">
                 <Link to="/time-watch">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                    <Link to="/time-watch">Подробнее</Link>
+                    Подробнее
                   </button>
                 </Link>
               </div>
@@ -214,7 +214,7 @@ const Grid = () => {
               <div className="card-actions  justify-end items-center z-20">
                 <Link to="/stadium">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                    <Link to="/stadium">Подробнее</Link>
+                    Подробнее
                   </button>
                 </Link>
               </div>
@@ -240,7 +240,7 @@ const Grid = () => {
               <div className="card-actions  justify-end items-center z-20">
                   <Link to="/ball">
                     <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                      <Link to="/ball">Подробнее</Link>
+                      Подробнее
                     </button>
                   </Link>
               </div>
@@ -264,7 +264,7 @@ const Grid = () => {
               <div className="card-actions  justify-end items-center z-20">
                 <Link to="/discovery">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                    <Link to="/discovery">Подробнее</Link>
+                    Подробнее
                   </button>
                 </Link>
               </div>

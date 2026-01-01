@@ -131,7 +131,6 @@ const handleGoBack = () => {
                 alt={title}
                 fill
                 className="object-cover"
-                priority
               />
             </div>
 

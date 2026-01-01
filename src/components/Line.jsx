@@ -24,7 +24,7 @@ export default function TimelineComponent() {
       <div className="max-w-4xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl md:text-4xl bg-gradient-to-r font-bold from-primary to-secondary bg-clip-text text-transparent mb-8 p-2 mb-4">
             Повышение квалификации
           </h3>
         </div>
@@ -44,11 +44,7 @@ export default function TimelineComponent() {
                   }`}
                 >
                   {/* Контент */}
-                  <div
-                    className={`w-1/2 ${
-                      index % 2 === 0 ? "pr-8 text-right" : "pl-8"
-                    }`}
-                  >
+                  <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
                     <div
                       className={` rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 ${
                         activeDate === index

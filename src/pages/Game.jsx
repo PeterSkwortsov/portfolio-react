@@ -105,9 +105,7 @@ const handleGoBack = () => {
               }`}
             >
               <span className="text-5xl md:text-5xl lg:text-7xl font-black">
-                <span className=" text-purple-700 ">
-                  {title}
-                </span>
+                <span className=" text-purple-700 ">{title}</span>
               </span>
             </h1>
 
@@ -126,9 +124,8 @@ const handleGoBack = () => {
               <img
                 src={imageUrl}
                 alt={title}
-                fill
+                fill="true"
                 className="object-cover"
-                priority
               />
             </div>
 

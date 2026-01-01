@@ -64,7 +64,7 @@ export default function ImageGridModal() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">
+      <h2 className="text-4xl md:text-4xl bg-gradient-to-r font-bold from-primary to-secondary bg-clip-text text-transparent mb-8 p-2">
         Достижения
       </h2>
 

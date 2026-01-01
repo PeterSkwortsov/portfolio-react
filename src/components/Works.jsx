@@ -76,16 +76,14 @@ const Right = styled.div`
 `;
 
 const items = [
-  "Wow-эффекты",
   "Шейдеры",
   "Движение",
   "Разрез детали",
-  "Управление камерой",
   "Карточки товаров",
 ];
 
 const Works = () => {
-  const [activeItem, setActiveItem] = useState("Wow-эффекты");
+  const [activeItem, setActiveItem] = useState("Шейдеры");
 
   const handleDivClick = (e, item) => {
     // Добавляем параметр event
@@ -137,21 +135,16 @@ const Works = () => {
             </List>
           </Left>
           <Right>
-            {activeItem === "Wow-эффекты" ? (
-              <Development />
-            ) : activeItem === "Шейдеры" ? (
+            {activeItem === "Шейдеры" ? (
               <Development />
             ) : activeItem === "Движение" ? (
               <ChairPage />
             ) : activeItem === "Разрез детали" ? (
               <Cloud />
-            ) : activeItem === "Управление камерой" ? (
-              <Development />
             ) : activeItem === "Карточки товаров" ? (
               <PrevCar />
             ) : null}
           </Right>
-          
         </Container>
       </Section>
     </>

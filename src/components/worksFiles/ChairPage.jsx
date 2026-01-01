@@ -16,11 +16,11 @@ const Desc = styled.div`
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 120px;
+  top: 320px;
   right: 150px;
 
   @media only screen and (max-width: 768px) {
-    top: 36rem;
+    top: 50rem;
     bottom: 0;
     left: 0;
     right: 0;

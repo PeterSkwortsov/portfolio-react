@@ -37,7 +37,7 @@ const handleGoBack = () => {
      title: "Творческая студия Вики Борщ",
      description: "Мастерская живописи и гончарного мастерства",
      imageUrl: "/bor2.jpg",
-     githubUrl: "https://github.com/username/ecommerce-platform",
+     githubUrl: "https://github.com/PeterSkwortsov/borsh",
      overview:
        "Главной целью было обеспечить быструю загрузку изображений, так как ожидалось множество фотографий. Нужно было отразить атмосферу творческой мастерской, используя оранжевый и красный цвета. Также требовалось включить всю необходимую информацию для SEO-продвижения. Необходимо было создать удобный и интуитивно понятный слайдер и таблицы с ценами, чтобы все было понятно и наглядно.",
 
@@ -107,8 +107,8 @@ const handleGoBack = () => {
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
-              <span className="text-5xl md:text-5xl lg:text-7xl font-black">
-                <span className="bg-gradient-to-r via-orange-800   to-red-500 from-purple-400 bg-clip-text text-transparent animate-gradient bg-300%">
+              <span className="text-5xl md:text-4xl  font-black">
+                <span className="text-orange-600">
                   {title}
                 </span>
               </span>
@@ -126,43 +126,31 @@ const handleGoBack = () => {
           >
             {/* Hero изображение */}
             <div className="relative  w-full">
-              <img
-                src={imageUrl}
-                alt={title}
-                fill
-                className="object-cover"
-              />
+              <img src={imageUrl} alt={title} fill className="object-cover" />
             </div>
 
             {/* Контент */}
             <div className="p-8 md:p-12">
               {/* Кнопки действий */}
               <div className="flex flex-wrap gap-4 mb-12">
-                <NavLink
+                <a
                   href={githubUrl}
-                  target="_blank"
+                  target="_parent"
                   rel="noopener noreferrer"
-                  className="group relative bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-3"
+                  className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700"
                 >
-                  <svg
-                    className="w-6 h-6 group-hover:scale-110 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                  </svg>
                   Исходный код
-                </NavLink>
+                </a>
 
                 {liveDemoUrl && (
-                  <NavLink
+                  <a
                     href={liveDemoUrl}
-                    target="_blank"
+                    target="_parent"
                     rel="noopener noreferrer"
                     className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700"
                   >
-                    🚀 Посмотреть демо
-                  </NavLink>
+                    Посмотреть демо
+                  </a>
                 )}
               </div>
 

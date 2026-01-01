@@ -161,9 +161,11 @@ const handleGoBack = () => {
                 {liveDemoUrl && (
                   <a
                     href={liveDemoUrl}
+                    target="_parent"
+                    rel="noopener noreferrer"
                     className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700"
                   >
-                    🚀 Посмотреть демо
+                    Посмотреть демо
                   </a>
                 )}
               </div>

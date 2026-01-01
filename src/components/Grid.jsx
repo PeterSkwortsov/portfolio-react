@@ -82,7 +82,8 @@ const Grid = () => {
                 Сайт проекта «История семьи»
               </h2>
               <p className="text-white">
-                Адаптив. Кастомный прелоадер. Дизайн, анимация и графика.
+                Адаптивная верстка. Анимационный прелоадер. Свой дизайн,
+                илюстрации.
               </p>
               <div className="card-actions justify-end items-center z-20">
                 <button
@@ -109,12 +110,13 @@ const Grid = () => {
                 Творческая студия «Вики Борщ»
               </h2>
               <p className="text-white">
-                Next.js, адаптив, многостраничный, дизайн.
+                Next.js, многостраничник, свой дизайн. Рабочий проект который
+                приносит прибыль
               </p>
               <div className="card-actions justify-end items-center z-20">
                 <Link to="/borschstudia">
                   <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                   Подробнее
+                    Подробнее
                   </button>
                 </Link>
               </div>
@@ -126,7 +128,7 @@ const Grid = () => {
             src="/fire.jpg"
             width={200}
             height={200}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Сайт песни «Огненная девочка»"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
@@ -151,7 +153,7 @@ const Grid = () => {
             src="/watch.jpg"
             width={200}
             height={200}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Онлайн демонстарция часов"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
@@ -176,7 +178,7 @@ const Grid = () => {
             src="/game.png"
             width={200}
             height={200}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Игра в мяч"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
@@ -200,7 +202,7 @@ const Grid = () => {
             src="/stadium.png"
             width={100}
             height={100}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Бронирование билетов на стадионе"
             style={{ width: "100%", height: "80%", backgroundSize: "contain" }}
           />
           <div className="card-body">
@@ -226,7 +228,7 @@ const Grid = () => {
             src="/ball2.png"
             width={200}
             height={200}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Анимация падения мяча"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">
@@ -234,15 +236,13 @@ const Grid = () => {
               <h2 className="card-title mt-2 text-white" id="section-3">
                 Анимация через изображения
               </h2>
-              <p className="text-white">
-                SVG, Inkscape, JavaScript, leader - line
-              </p>
+              <p className="text-white">Blender, техника раскадровки + GSAP</p>
               <div className="card-actions  justify-end items-center z-20">
-                  <Link to="/ball">
-                    <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
-                      Подробнее
-                    </button>
-                  </Link>
+                <Link to="/ball">
+                  <button className="btn btn-primary bg-white text-black rounded-xl mt-4">
+                    Подробнее
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ const Grid = () => {
             src="/cubes.jpg"
             width={200}
             height={200}
-            alt="Сайт творческой студии Вики Борщ"
+            alt="Переход между страницами"
             style={{ width: "100%", height: "100%" }}
           />
           <div className="card-body">

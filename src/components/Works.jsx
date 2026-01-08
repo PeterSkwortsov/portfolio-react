@@ -6,6 +6,7 @@ import Development from "../components/worksFiles/Development";
 import ChairPage from "../components/worksFiles/ChairPage";
 import Cloud from "../components/worksFiles/Cloud";
 import PrevCar from "../components/worksFiles/PrevCar";
+import WebDesign from "../components/worksFiles/WebDesign";
 
 const Section = styled.div`
 
@@ -80,6 +81,7 @@ const items = [
   "Движение",
   "Разрез детали",
   "Карточки товаров",
+  "Демонстрация",
 ];
 
 const Works = () => {
@@ -143,6 +145,8 @@ const Works = () => {
               <Cloud />
             ) : activeItem === "Карточки товаров" ? (
               <PrevCar />
+            ) : activeItem === "Демонстрация" ? (
+              <WebDesign />
             ) : null}
           </Right>
         </Container>

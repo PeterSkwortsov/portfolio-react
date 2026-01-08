@@ -20,7 +20,7 @@ const Desc = styled.div`
   right: 150px;
 
   @media only screen and (max-width: 768px) {
-    top: 50rem;
+    top: 40rem;
     bottom: 0;
     left: 0;
     right: 0;
@@ -31,7 +31,7 @@ const ChairPage = () => {
   return (
     <div className="h-96">
       <Canvas camera={{ position: [0, 2, 5] }}>
-        <OrbitControls />
+        <OrbitControls enableZoom={false} />
         <Suspense fallback={null}>
           <ambientLight intensity={2} />
           <directionalLight castShadow position={[0, 1, 5]} intensity={5} />
@@ -63,7 +63,7 @@ const ChairPage = () => {
         dataInterpolation={(p) => `Загружаем модель  ${p.toFixed(0)}%`}
       />{" "}
       <Desc>
-       Модель может перемещаться как игровой персонаж, только в браузере
+        Модель может перемещаться как игровой персонаж, только в браузере
       </Desc>
     </div>
   );

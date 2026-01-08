@@ -89,7 +89,7 @@ export default function WebDesign() {
   const [modelLoaded, setModelLoaded] = useState(false);
 
   return (
-    <div className="h-96">
+    <div style={{ width: "100%", height: "500px" }}>
       <Suspense fallback={null}>
         <Canvas
           camera={{ position: [0, 0, 9] }}
@@ -105,7 +105,7 @@ export default function WebDesign() {
             maxPolarAngle={Math.PI / 2} // 120 градусов максимальный наклон
           />
 
-          <Venus position={[1, -2, 0]} />
+          <Venus />
         </Canvas>
       </Suspense>
     </div>

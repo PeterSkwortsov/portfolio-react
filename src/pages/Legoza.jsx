@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Ships() {

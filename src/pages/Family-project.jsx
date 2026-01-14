@@ -1,7 +1,6 @@
 
 
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -67,10 +66,7 @@ export default function Family() {
       goals,
       technologies,
       results,
-      liveDemoUrl,
-      status,
-      duration,
-    } = projectData;
+      liveDemoUrl} = projectData;
 
     return (
       <>

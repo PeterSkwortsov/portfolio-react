@@ -95,7 +95,7 @@ export const Overlay = () => {
                   ${scenes[displaySlide].price.toLocaleString()}
                 </p>
               </div>
-              <p className="text-sm opacity-80">Цена:</p>
+              <p className="text-sm opacity-80">Цена</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-2">

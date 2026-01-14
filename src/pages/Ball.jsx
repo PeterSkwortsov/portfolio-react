@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -35,7 +34,6 @@ const handleGoBack = () => {
 
    const projectData = {
      title: "Техника раскадровки",
-     description: "",
      imageUrl: "/ball.png",
      githubUrl: "https://github.com/PeterSkwortsov/ball",
      overview:
@@ -52,14 +50,11 @@ const handleGoBack = () => {
 
   const {
     title,
-    description,
     imageUrl,
     githubUrl,
     overview,
     overview2,
-    goals,
     technologies,
-    results,
     liveDemoUrl,
     status,
     duration,

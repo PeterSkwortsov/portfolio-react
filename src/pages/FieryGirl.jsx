@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -52,12 +51,10 @@ const handleGoBack = () => {
 
   const {
     title,
-    description,
     imageUrl,
     githubUrl,
     overview,
     overview2,
-    goals,
     technologies,
     results,
     liveDemoUrl,

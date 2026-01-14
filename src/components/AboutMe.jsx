@@ -2,7 +2,6 @@
 import { useState } from "react";
 import DownloadWordFile from "./DownloadWordFile";
 import TechnologiesList from "./TechnologiesList";
-import { NavLink } from "react-router-dom";
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState("about");
 
@@ -163,7 +162,7 @@ export default function AboutMe() {
                 <div className="space-y-4">
                   <div className="flex items-center text-white justify-center gap-4 p-3 bg-base-100 rounded-lg">
                     <div>
-                      <p className="text-white font-semibold">
+                      <p className="text-purple-400 font-semibold">
                         skwortsow.petia@yandex.ru
                       </p>
                       <div className="flex gap-2 justify-center mt-2">
@@ -199,12 +198,12 @@ export default function AboutMe() {
 
                   <div className="flex items-center justify-center gap-4 p-3 bg-base-100 rounded-lg">
                     <div>
-                      <NavLink
+                      <a
                         href="https://github.com/PeterSkwortsov"
                         className="btn bg-black shadow-2xl  text-white rounded-2xl"
                       >
                         GitHub
-                      </NavLink>
+                      </a>
                     </div>
                   </div>
                 </div>

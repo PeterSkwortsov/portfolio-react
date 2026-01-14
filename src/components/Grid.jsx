@@ -173,7 +173,7 @@ const Grid = () => {
           </div>
         </div>
 
-        <div className="card bg-slate-900 img-full w-auto">
+        {/* <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/game.png"
             width={200}
@@ -196,7 +196,7 @@ const Grid = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="card bg-slate-900 img-full w-auto">
           <img
             src="/stadium.png"
